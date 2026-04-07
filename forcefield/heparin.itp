@@ -1,0 +1,1364 @@
+;This is the itp file for the sequence GDS-IDO-GDS-IDO-GDS-IDO-GDS-IDO-GDS-IDO-GDS-IDO-GDS-IDO-GDS-IDO-GDS-IDO
+; Time generate: 2023Apr13-18h30m
+
+[moleculetype]
+;molname		nrexcl
+Heparin_dp18 	  2
+
+[atoms]
+;id     type    resnr   residue atom    cgnr    charge
+1       PP1     1       GDS     BG      1       0.000   
+2       D2      1       GDS     BGp     2       0.350   
+3       D2      1       GDS     BGm     2       -0.350  
+4       Qa      1       GDS     B2      3       -1.000  
+5       PTN0    1       GDS     B3      4       0.000   
+6       D2A     1       GDS     B3p     5       0.240   
+7       D2A     1       GDS     B3m     5       -0.240  
+8       Qa      1       GDS     B6      6       -1.000  
+9       PP1     2       IDO     BG      7       0.000   
+10      D2      2       IDO     BGp     8       0.380   
+11      D2      2       IDO     BGm     8       -0.380  
+12      Qa      2       IDO     B2      9       -1.000  
+13      PTN0    2       IDO     B3      10      0.000   
+14      D2A     2       IDO     B3p     11      0.240   
+15      D2A     2       IDO     B3m     11      -0.240  
+16      SQa     2       IDO     B6      12      -1.000  
+17      PP1     3       GDS     BG      13      0.000   
+18      D2      3       GDS     BGp     14      0.350   
+19      D2      3       GDS     BGm     14      -0.350  
+20      Qa      3       GDS     B2      15      -1.000  
+21      PTN0    3       GDS     B3      16      0.000   
+22      D2A     3       GDS     B3p     17      0.240   
+23      D2A     3       GDS     B3m     17      -0.240  
+24      Qa      3       GDS     B6      18      -1.000  
+25      PP1     4       IDO     BG      19      0.000   
+26      D2      4       IDO     BGp     20      0.380   
+27      D2      4       IDO     BGm     20      -0.380  
+28      Qa      4       IDO     B2      21      -1.000  
+29      PTN0    4       IDO     B3      22      0.000   
+30      D2A     4       IDO     B3p     23      0.240   
+31      D2A     4       IDO     B3m     23      -0.240  
+32      SQa     4       IDO     B6      24      -1.000  
+33      PP1     5       GDS     BG      25      0.000   
+34      D2      5       GDS     BGp     26      0.350   
+35      D2      5       GDS     BGm     26      -0.350  
+36      Qa      5       GDS     B2      27      -1.000  
+37      PTN0    5       GDS     B3      28      0.000   
+38      D2A     5       GDS     B3p     29      0.240   
+39      D2A     5       GDS     B3m     29      -0.240  
+40      Qa      5       GDS     B6      30      -1.000  
+41      PP1     6       IDO     BG      31      0.000   
+42      D2      6       IDO     BGp     32      0.380   
+43      D2      6       IDO     BGm     32      -0.380  
+44      Qa      6       IDO     B2      33      -1.000  
+45      PTN0    6       IDO     B3      34      0.000   
+46      D2A     6       IDO     B3p     35      0.240   
+47      D2A     6       IDO     B3m     35      -0.240  
+48      SQa     6       IDO     B6      36      -1.000  
+49      PP1     7       GDS     BG      37      0.000   
+50      D2      7       GDS     BGp     38      0.350   
+51      D2      7       GDS     BGm     38      -0.350  
+52      Qa      7       GDS     B2      39      -1.000  
+53      PTN0    7       GDS     B3      40      0.000   
+54      D2A     7       GDS     B3p     41      0.240   
+55      D2A     7       GDS     B3m     41      -0.240  
+56      Qa      7       GDS     B6      42      -1.000  
+57      PP1     8       IDO     BG      43      0.000   
+58      D2      8       IDO     BGp     44      0.380   
+59      D2      8       IDO     BGm     44      -0.380  
+60      Qa      8       IDO     B2      45      -1.000  
+61      PTN0    8       IDO     B3      46      0.000   
+62      D2A     8       IDO     B3p     47      0.240   
+63      D2A     8       IDO     B3m     47      -0.240  
+64      SQa     8       IDO     B6      48      -1.000  
+65      PP1     9       GDS     BG      49      0.000   
+66      D2      9       GDS     BGp     50      0.350   
+67      D2      9       GDS     BGm     50      -0.350  
+68      Qa      9       GDS     B2      51      -1.000  
+69      PTN0    9       GDS     B3      52      0.000   
+70      D2A     9       GDS     B3p     53      0.240   
+71      D2A     9       GDS     B3m     53      -0.240  
+72      Qa      9       GDS     B6      54      -1.000  
+73      PP1     10      IDO     BG      55      0.000   
+74      D2      10      IDO     BGp     56      0.380   
+75      D2      10      IDO     BGm     56      -0.380  
+76      Qa      10      IDO     B2      57      -1.000  
+77      PTN0    10      IDO     B3      58      0.000   
+78      D2A     10      IDO     B3p     59      0.240   
+79      D2A     10      IDO     B3m     59      -0.240  
+80      SQa     10      IDO     B6      60      -1.000  
+81      PP1     11      GDS     BG      61      0.000   
+82      D2      11      GDS     BGp     62      0.350   
+83      D2      11      GDS     BGm     62      -0.350  
+84      Qa      11      GDS     B2      63      -1.000  
+85      PTN0    11      GDS     B3      64      0.000   
+86      D2A     11      GDS     B3p     65      0.240   
+87      D2A     11      GDS     B3m     65      -0.240  
+88      Qa      11      GDS     B6      66      -1.000  
+89      PP1     12      IDO     BG      67      0.000   
+90      D2      12      IDO     BGp     68      0.380   
+91      D2      12      IDO     BGm     68      -0.380  
+92      Qa      12      IDO     B2      69      -1.000  
+93      PTN0    12      IDO     B3      70      0.000   
+94      D2A     12      IDO     B3p     71      0.240   
+95      D2A     12      IDO     B3m     71      -0.240  
+96      SQa     12      IDO     B6      72      -1.000  
+97      PP1     13      GDS     BG      73      0.000   
+98      D2      13      GDS     BGp     74      0.350   
+99      D2      13      GDS     BGm     74      -0.350  
+100     Qa      13      GDS     B2      75      -1.000  
+101     PTN0    13      GDS     B3      76      0.000   
+102     D2A     13      GDS     B3p     77      0.240   
+103     D2A     13      GDS     B3m     77      -0.240  
+104     Qa      13      GDS     B6      78      -1.000  
+105     PP1     14      IDO     BG      79      0.000   
+106     D2      14      IDO     BGp     80      0.380   
+107     D2      14      IDO     BGm     80      -0.380  
+108     Qa      14      IDO     B2      81      -1.000  
+109     PTN0    14      IDO     B3      82      0.000   
+110     D2A     14      IDO     B3p     83      0.240   
+111     D2A     14      IDO     B3m     83      -0.240  
+112     SQa     14      IDO     B6      84      -1.000  
+113     PP1     15      GDS     BG      85      0.000   
+114     D2      15      GDS     BGp     86      0.350   
+115     D2      15      GDS     BGm     86      -0.350  
+116     Qa      15      GDS     B2      87      -1.000  
+117     PTN0    15      GDS     B3      88      0.000   
+118     D2A     15      GDS     B3p     89      0.240   
+119     D2A     15      GDS     B3m     89      -0.240  
+120     Qa      15      GDS     B6      90      -1.000  
+121     PP1     16      IDO     BG      91      0.000   
+122     D2      16      IDO     BGp     92      0.380   
+123     D2      16      IDO     BGm     92      -0.380  
+124     Qa      16      IDO     B2      93      -1.000  
+125     PTN0    16      IDO     B3      94      0.000   
+126     D2A     16      IDO     B3p     95      0.240   
+127     D2A     16      IDO     B3m     95      -0.240  
+128     SQa     16      IDO     B6      96      -1.000  
+129     PP1     17      GDS     BG      97      0.000   
+130     D2      17      GDS     BGp     98      0.350   
+131     D2      17      GDS     BGm     98      -0.350  
+132     Qa      17      GDS     B2      99      -1.000  
+133     PTN0    17      GDS     B3      100     0.000   
+134     D2A     17      GDS     B3p     101     0.240   
+135     D2A     17      GDS     B3m     101     -0.240  
+136     Qa      17      GDS     B6      102     -1.000  
+137     PP1     18      IDO     BG      103     0.000   
+138     D2      18      IDO     BGp     104     0.380   
+139     D2      18      IDO     BGm     104     -0.380  
+140     Qa      18      IDO     B2      105     -1.000  
+141     PTN0    18      IDO     B3      106     0.000   
+142     D2A     18      IDO     B3p     107     0.240   
+143     D2A     18      IDO     B3m     107     -0.240  
+144     SQa     18      IDO     B6      108     -1.000  
+
+[bonds]
+;Intra-residue bonds
+;
+;BG-B2 bonds
+;atom1      atom2       funct   bondlen   k
+1       4       1       0.4500  40000.000 ; GDS1, BG-B2
+9       12      1       0.4411  60000.000 ; IDO2, BG-B2
+17      20      1       0.4500  40000.000 ; GDS3, BG-B2
+25      28      1       0.4411  60000.000 ; IDO4, BG-B2
+33      36      1       0.4500  40000.000 ; GDS5, BG-B2
+41      44      1       0.4411  60000.000 ; IDO6, BG-B2
+49      52      1       0.4500  40000.000 ; GDS7, BG-B2
+57      60      1       0.4411  60000.000 ; IDO8, BG-B2
+65      68      1       0.4500  40000.000 ; GDS9, BG-B2
+73      76      1       0.4411  60000.000 ; IDO10, BG-B2
+81      84      1       0.4500  40000.000 ; GDS11, BG-B2
+89      92      1       0.4411  60000.000 ; IDO12, BG-B2
+97      100     1       0.4500  40000.000 ; GDS13, BG-B2
+105     108     1       0.4411  60000.000 ; IDO14, BG-B2
+113     116     1       0.4500  40000.000 ; GDS15, BG-B2
+121     124     1       0.4411  60000.000 ; IDO16, BG-B2
+129     132     1       0.4500  40000.000 ; GDS17, BG-B2
+137     140     1       0.4411  60000.000 ; IDO18, BG-B2
+;
+;
+;BG-B3 bonds
+;atom1      atom2       funct   bondlen   k
+1       5       1       0.2500  80000.000 ; GDS1, BG-B3
+9       13      1       0.2569  80000.000 ; IDO2, BG-B3
+17      21      1       0.2500  80000.000 ; GDS3, BG-B3
+25      29      1       0.2569  80000.000 ; IDO4, BG-B3
+33      37      1       0.2500  80000.000 ; GDS5, BG-B3
+41      45      1       0.2569  80000.000 ; IDO6, BG-B3
+49      53      1       0.2500  80000.000 ; GDS7, BG-B3
+57      61      1       0.2569  80000.000 ; IDO8, BG-B3
+65      69      1       0.2500  80000.000 ; GDS9, BG-B3
+73      77      1       0.2569  80000.000 ; IDO10, BG-B3
+81      85      1       0.2500  80000.000 ; GDS11, BG-B3
+89      93      1       0.2569  80000.000 ; IDO12, BG-B3
+97      101     1       0.2500  80000.000 ; GDS13, BG-B3
+105     109     1       0.2569  80000.000 ; IDO14, BG-B3
+113     117     1       0.2500  80000.000 ; GDS15, BG-B3
+121     125     1       0.2569  80000.000 ; IDO16, BG-B3
+129     133     1       0.2500  80000.000 ; GDS17, BG-B3
+137     141     1       0.2569  80000.000 ; IDO18, BG-B3
+;
+;
+;B2-B3 bonds
+;atom1      atom2       funct   bondlen   k
+4       5       1       0.3750  25000.000 ; GDS1, B2-B3
+12      13      1       0.3200  25000.000 ; IDO2, B2-B3
+20      21      1       0.3750  25000.000 ; GDS3, B2-B3
+28      29      1       0.3200  25000.000 ; IDO4, B2-B3
+36      37      1       0.3750  25000.000 ; GDS5, B2-B3
+44      45      1       0.3200  25000.000 ; IDO6, B2-B3
+52      53      1       0.3750  25000.000 ; GDS7, B2-B3
+60      61      1       0.3200  25000.000 ; IDO8, B2-B3
+68      69      1       0.3750  25000.000 ; GDS9, B2-B3
+76      77      1       0.3200  25000.000 ; IDO10, B2-B3
+84      85      1       0.3750  25000.000 ; GDS11, B2-B3
+92      93      1       0.3200  25000.000 ; IDO12, B2-B3
+100     101     1       0.3750  25000.000 ; GDS13, B2-B3
+108     109     1       0.3200  25000.000 ; IDO14, B2-B3
+116     117     1       0.3750  25000.000 ; GDS15, B2-B3
+124     125     1       0.3200  25000.000 ; IDO16, B2-B3
+132     133     1       0.3750  25000.000 ; GDS17, B2-B3
+140     141     1       0.3200  25000.000 ; IDO18, B2-B3
+;
+;
+;BG-B6 bonds
+;atom1      atom2       funct   bondlen   k
+1       8       1       0.4000  30000.000 ; GDS1, BG-B6
+9       16      1       0.2650  80000.000 ; IDO2, BG-B6
+17      24      1       0.4000  30000.000 ; GDS3, BG-B6
+25      32      1       0.2650  80000.000 ; IDO4, BG-B6
+33      40      1       0.4000  30000.000 ; GDS5, BG-B6
+41      48      1       0.2650  80000.000 ; IDO6, BG-B6
+49      56      1       0.4000  30000.000 ; GDS7, BG-B6
+57      64      1       0.2650  80000.000 ; IDO8, BG-B6
+65      72      1       0.4000  30000.000 ; GDS9, BG-B6
+73      80      1       0.2650  80000.000 ; IDO10, BG-B6
+81      88      1       0.4000  30000.000 ; GDS11, BG-B6
+89      96      1       0.2650  80000.000 ; IDO12, BG-B6
+97      104     1       0.4000  30000.000 ; GDS13, BG-B6
+105     112     1       0.2650  80000.000 ; IDO14, BG-B6
+113     120     1       0.4000  30000.000 ; GDS15, BG-B6
+121     128     1       0.2650  80000.000 ; IDO16, BG-B6
+129     136     1       0.4000  30000.000 ; GDS17, BG-B6
+137     144     1       0.2650  80000.000 ; IDO18, BG-B6
+;
+;Dummy bonds
+;
+;BG-BGm bonds
+;atom1      atom2       funct   bondlen   k
+1       3       1       0.1400  30000.000 ; GDS1, BG-BGm
+9       11      1       0.1400  30000.000 ; IDO2, BG-BGm
+17      19      1       0.1400  30000.000 ; GDS3, BG-BGm
+25      27      1       0.1400  30000.000 ; IDO4, BG-BGm
+33      35      1       0.1400  30000.000 ; GDS5, BG-BGm
+41      43      1       0.1400  30000.000 ; IDO6, BG-BGm
+49      51      1       0.1400  30000.000 ; GDS7, BG-BGm
+57      59      1       0.1400  30000.000 ; IDO8, BG-BGm
+65      67      1       0.1400  30000.000 ; GDS9, BG-BGm
+73      75      1       0.1400  30000.000 ; IDO10, BG-BGm
+81      83      1       0.1400  30000.000 ; GDS11, BG-BGm
+89      91      1       0.1400  30000.000 ; IDO12, BG-BGm
+97      99      1       0.1400  30000.000 ; GDS13, BG-BGm
+105     107     1       0.1400  30000.000 ; IDO14, BG-BGm
+113     115     1       0.1400  30000.000 ; GDS15, BG-BGm
+121     123     1       0.1400  30000.000 ; IDO16, BG-BGm
+129     131     1       0.1400  30000.000 ; GDS17, BG-BGm
+137     139     1       0.1400  30000.000 ; IDO18, BG-BGm
+;
+;
+;BG-BGp bonds
+;atom1      atom2       funct   bondlen   k
+1       2       1       0.1400  30000.000 ; GDS1, BG-BGp
+9       10      1       0.1400  30000.000 ; IDO2, BG-BGp
+17      18      1       0.1400  30000.000 ; GDS3, BG-BGp
+25      26      1       0.1400  30000.000 ; IDO4, BG-BGp
+33      34      1       0.1400  30000.000 ; GDS5, BG-BGp
+41      42      1       0.1400  30000.000 ; IDO6, BG-BGp
+49      50      1       0.1400  30000.000 ; GDS7, BG-BGp
+57      58      1       0.1400  30000.000 ; IDO8, BG-BGp
+65      66      1       0.1400  30000.000 ; GDS9, BG-BGp
+73      74      1       0.1400  30000.000 ; IDO10, BG-BGp
+81      82      1       0.1400  30000.000 ; GDS11, BG-BGp
+89      90      1       0.1400  30000.000 ; IDO12, BG-BGp
+97      98      1       0.1400  30000.000 ; GDS13, BG-BGp
+105     106     1       0.1400  30000.000 ; IDO14, BG-BGp
+113     114     1       0.1400  30000.000 ; GDS15, BG-BGp
+121     122     1       0.1400  30000.000 ; IDO16, BG-BGp
+129     130     1       0.1400  30000.000 ; GDS17, BG-BGp
+137     138     1       0.1400  30000.000 ; IDO18, BG-BGp
+;
+;
+;B3-B3m bonds
+;atom1      atom2       funct   bondlen   k
+5       7       1       0.0953  30000.000 ; GDS1, B3-B3m
+13      15      1       0.0953  30000.000 ; IDO2, B3-B3m
+21      23      1       0.0953  30000.000 ; GDS3, B3-B3m
+29      31      1       0.0953  30000.000 ; IDO4, B3-B3m
+37      39      1       0.0953  30000.000 ; GDS5, B3-B3m
+45      47      1       0.0953  30000.000 ; IDO6, B3-B3m
+53      55      1       0.0953  30000.000 ; GDS7, B3-B3m
+61      63      1       0.0953  30000.000 ; IDO8, B3-B3m
+69      71      1       0.0953  30000.000 ; GDS9, B3-B3m
+77      79      1       0.0953  30000.000 ; IDO10, B3-B3m
+85      87      1       0.0953  30000.000 ; GDS11, B3-B3m
+93      95      1       0.0953  30000.000 ; IDO12, B3-B3m
+101     103     1       0.0953  30000.000 ; GDS13, B3-B3m
+109     111     1       0.0953  30000.000 ; IDO14, B3-B3m
+117     119     1       0.0953  30000.000 ; GDS15, B3-B3m
+125     127     1       0.0953  30000.000 ; IDO16, B3-B3m
+133     135     1       0.0953  30000.000 ; GDS17, B3-B3m
+141     143     1       0.0953  30000.000 ; IDO18, B3-B3m
+;
+;
+;B3-B3p bonds
+;atom1      atom2       funct   bondlen   k
+5       6       1       0.0953  30000.000 ; GDS1, B3-B3p
+13      14      1       0.0953  30000.000 ; IDO2, B3-B3p
+21      22      1       0.0953  30000.000 ; GDS3, B3-B3p
+29      30      1       0.0953  30000.000 ; IDO4, B3-B3p
+37      38      1       0.0953  30000.000 ; GDS5, B3-B3p
+45      46      1       0.0953  30000.000 ; IDO6, B3-B3p
+53      54      1       0.0953  30000.000 ; GDS7, B3-B3p
+61      62      1       0.0953  30000.000 ; IDO8, B3-B3p
+69      70      1       0.0953  30000.000 ; GDS9, B3-B3p
+77      78      1       0.0953  30000.000 ; IDO10, B3-B3p
+85      86      1       0.0953  30000.000 ; GDS11, B3-B3p
+93      94      1       0.0953  30000.000 ; IDO12, B3-B3p
+101     102     1       0.0953  30000.000 ; GDS13, B3-B3p
+109     110     1       0.0953  30000.000 ; IDO14, B3-B3p
+117     118     1       0.0953  30000.000 ; GDS15, B3-B3p
+125     126     1       0.0953  30000.000 ; IDO16, B3-B3p
+133     134     1       0.0953  30000.000 ; GDS17, B3-B3p
+141     142     1       0.0953  30000.000 ; IDO18, B3-B3p
+;
+;Inter-residue bonds
+;
+;BGi-BGii bonds
+;atom1      atom2       funct   bondlen   k
+1       9       1       0.4950  30000.000 ; GDS1-IDO2, BGi-BGii
+9       17      1       0.4350  30000.000 ; IDO2-GDS3, BGi-BGii
+17      25      1       0.4950  30000.000 ; GDS3-IDO4, BGi-BGii
+25      33      1       0.4350  30000.000 ; IDO4-GDS5, BGi-BGii
+33      41      1       0.4950  30000.000 ; GDS5-IDO6, BGi-BGii
+41      49      1       0.4350  30000.000 ; IDO6-GDS7, BGi-BGii
+49      57      1       0.4950  30000.000 ; GDS7-IDO8, BGi-BGii
+57      65      1       0.4350  30000.000 ; IDO8-GDS9, BGi-BGii
+65      73      1       0.4950  30000.000 ; GDS9-IDO10, BGi-BGii
+73      81      1       0.4350  30000.000 ; IDO10-GDS11, BGi-BGii
+81      89      1       0.4950  30000.000 ; GDS11-IDO12, BGi-BGii
+89      97      1       0.4350  30000.000 ; IDO12-GDS13, BGi-BGii
+97      105     1       0.4950  30000.000 ; GDS13-IDO14, BGi-BGii
+105     113     1       0.4350  30000.000 ; IDO14-GDS15, BGi-BGii
+113     121     1       0.4950  30000.000 ; GDS15-IDO16, BGi-BGii
+121     129     1       0.4350  30000.000 ; IDO16-GDS17, BGi-BGii
+129     137     1       0.4950  30000.000 ; GDS17-IDO18, BGi-BGii
+;
+
+[constraints]
+;atom1  	atom2	func 		 distance
+
+[angles]
+;Intra-residue angles
+;
+;BG-B2-B3 angles
+;atom1	atom2	atom3	func	angle	force.cons multiplicity
+1       4       5       2       33.331  1000.000 ; GDS1, BG-B2-B3
+9       12      13      2       35.011  1000.000 ; IDO2, BG-B2-B3
+17      20      21      2       33.331  1000.000 ; GDS3, BG-B2-B3
+25      28      29      2       35.011  1000.000 ; IDO4, BG-B2-B3
+33      36      37      2       33.331  1000.000 ; GDS5, BG-B2-B3
+41      44      45      2       35.011  1000.000 ; IDO6, BG-B2-B3
+49      52      53      2       33.331  1000.000 ; GDS7, BG-B2-B3
+57      60      61      2       35.011  1000.000 ; IDO8, BG-B2-B3
+65      68      69      2       33.331  1000.000 ; GDS9, BG-B2-B3
+73      76      77      2       35.011  1000.000 ; IDO10, BG-B2-B3
+81      84      85      2       33.331  1000.000 ; GDS11, BG-B2-B3
+89      92      93      2       35.011  1000.000 ; IDO12, BG-B2-B3
+97      100     101     2       33.331  1000.000 ; GDS13, BG-B2-B3
+105     108     109     2       35.011  1000.000 ; IDO14, BG-B2-B3
+113     116     117     2       33.331  1000.000 ; GDS15, BG-B2-B3
+121     124     125     2       35.011  1000.000 ; IDO16, BG-B2-B3
+129     132     133     2       33.331  1000.000 ; GDS17, BG-B2-B3
+137     140     141     2       35.011  1000.000 ; IDO18, BG-B2-B3
+;
+;
+;B2-B3-BG angles
+;atom1	atom2	atom3	func	angle	force.cons multiplicity
+4       5       1       2       90.805  450.000  ; GDS1, B2-B3-BG
+12      13      9       2       99.853  450.000  ; IDO2, B2-B3-BG
+20      21      17      2       90.805  450.000  ; GDS3, B2-B3-BG
+28      29      25      2       99.853  450.000  ; IDO4, B2-B3-BG
+36      37      33      2       90.805  450.000  ; GDS5, B2-B3-BG
+44      45      41      2       99.853  450.000  ; IDO6, B2-B3-BG
+52      53      49      2       90.805  450.000  ; GDS7, B2-B3-BG
+60      61      57      2       99.853  450.000  ; IDO8, B2-B3-BG
+68      69      65      2       90.805  450.000  ; GDS9, B2-B3-BG
+76      77      73      2       99.853  450.000  ; IDO10, B2-B3-BG
+84      85      81      2       90.805  450.000  ; GDS11, B2-B3-BG
+92      93      89      2       99.853  450.000  ; IDO12, B2-B3-BG
+100     101     97      2       90.805  450.000  ; GDS13, B2-B3-BG
+108     109     105     2       99.853  450.000  ; IDO14, B2-B3-BG
+116     117     113     2       90.805  450.000  ; GDS15, B2-B3-BG
+124     125     121     2       99.853  450.000  ; IDO16, B2-B3-BG
+132     133     129     2       90.805  450.000  ; GDS17, B2-B3-BG
+140     141     137     2       99.853  450.000  ; IDO18, B2-B3-BG
+;
+;
+;B3-BG-B2 angles
+;atom1	atom2	atom3	func	angle	force.cons multiplicity
+5       1       4       2       55.560  300.000  ; GDS1, B3-BG-B2
+13      9       12      2       45.136  300.000  ; IDO2, B3-BG-B2
+21      17      20      2       55.560  300.000  ; GDS3, B3-BG-B2
+29      25      28      2       45.136  300.000  ; IDO4, B3-BG-B2
+37      33      36      2       55.560  300.000  ; GDS5, B3-BG-B2
+45      41      44      2       45.136  300.000  ; IDO6, B3-BG-B2
+53      49      52      2       55.560  300.000  ; GDS7, B3-BG-B2
+61      57      60      2       45.136  300.000  ; IDO8, B3-BG-B2
+69      65      68      2       55.560  300.000  ; GDS9, B3-BG-B2
+77      73      76      2       45.136  300.000  ; IDO10, B3-BG-B2
+85      81      84      2       55.560  300.000  ; GDS11, B3-BG-B2
+93      89      92      2       45.136  300.000  ; IDO12, B3-BG-B2
+101     97      100     2       55.560  300.000  ; GDS13, B3-BG-B2
+109     105     108     2       45.136  300.000  ; IDO14, B3-BG-B2
+117     113     116     2       55.560  300.000  ; GDS15, B3-BG-B2
+125     121     124     2       45.136  300.000  ; IDO16, B3-BG-B2
+133     129     132     2       55.560  300.000  ; GDS17, B3-BG-B2
+141     137     140     2       45.136  300.000  ; IDO18, B3-BG-B2
+;
+;
+;B6-BG-B2 angles
+;atom1	atom2	atom3	func	angle	force.cons multiplicity
+8       1       4       2       155.000 250.000  ; GDS1, B6-BG-B2
+16      9       12      2       142.694 400.000  ; IDO2, B6-BG-B2
+24      17      20      2       155.000 250.000  ; GDS3, B6-BG-B2
+32      25      28      2       142.694 400.000  ; IDO4, B6-BG-B2
+40      33      36      2       155.000 250.000  ; GDS5, B6-BG-B2
+48      41      44      2       142.694 400.000  ; IDO6, B6-BG-B2
+56      49      52      2       155.000 250.000  ; GDS7, B6-BG-B2
+64      57      60      2       142.694 400.000  ; IDO8, B6-BG-B2
+72      65      68      2       155.000 250.000  ; GDS9, B6-BG-B2
+80      73      76      2       142.694 400.000  ; IDO10, B6-BG-B2
+88      81      84      2       155.000 250.000  ; GDS11, B6-BG-B2
+96      89      92      2       142.694 400.000  ; IDO12, B6-BG-B2
+104     97      100     2       155.000 250.000  ; GDS13, B6-BG-B2
+112     105     108     2       142.694 400.000  ; IDO14, B6-BG-B2
+120     113     116     2       155.000 250.000  ; GDS15, B6-BG-B2
+128     121     124     2       142.694 400.000  ; IDO16, B6-BG-B2
+136     129     132     2       155.000 250.000  ; GDS17, B6-BG-B2
+144     137     140     2       142.694 400.000  ; IDO18, B6-BG-B2
+;
+;
+;B6-BG-B3 angles
+;atom1	atom2	atom3	func	angle	force.cons multiplicity
+8       1       5       2       137.461 200.000  ; GDS1, B6-BG-B3
+16      9       13      2       140.000 350.000  ; IDO2, B6-BG-B3
+24      17      21      2       137.461 200.000  ; GDS3, B6-BG-B3
+32      25      29      2       140.000 350.000  ; IDO4, B6-BG-B3
+40      33      37      2       137.461 200.000  ; GDS5, B6-BG-B3
+48      41      45      2       140.000 350.000  ; IDO6, B6-BG-B3
+56      49      53      2       137.461 200.000  ; GDS7, B6-BG-B3
+64      57      61      2       140.000 350.000  ; IDO8, B6-BG-B3
+72      65      69      2       137.461 200.000  ; GDS9, B6-BG-B3
+80      73      77      2       140.000 350.000  ; IDO10, B6-BG-B3
+88      81      85      2       137.461 200.000  ; GDS11, B6-BG-B3
+96      89      93      2       140.000 350.000  ; IDO12, B6-BG-B3
+104     97      101     2       137.461 200.000  ; GDS13, B6-BG-B3
+112     105     109     2       140.000 350.000  ; IDO14, B6-BG-B3
+120     113     117     2       137.461 200.000  ; GDS15, B6-BG-B3
+128     121     125     2       140.000 350.000  ; IDO16, B6-BG-B3
+136     129     133     2       137.461 200.000  ; GDS17, B6-BG-B3
+144     137     141     2       140.000 350.000  ; IDO18, B6-BG-B3
+;
+;Dummy angles
+;
+;BGm-BG-BGp angles
+;atom1	atom2	atom3	func	angle	force.cons multiplicity
+3       1       2       2       180.000 35.000   ; GDS1, BGm-BG-BGp
+11      9       10      2       180.000 8.500    ; IDO2, BGm-BG-BGp
+19      17      18      2       180.000 35.000   ; GDS3, BGm-BG-BGp
+27      25      26      2       180.000 8.500    ; IDO4, BGm-BG-BGp
+35      33      34      2       180.000 35.000   ; GDS5, BGm-BG-BGp
+43      41      42      2       180.000 8.500    ; IDO6, BGm-BG-BGp
+51      49      50      2       180.000 35.000   ; GDS7, BGm-BG-BGp
+59      57      58      2       180.000 8.500    ; IDO8, BGm-BG-BGp
+67      65      66      2       180.000 35.000   ; GDS9, BGm-BG-BGp
+75      73      74      2       180.000 8.500    ; IDO10, BGm-BG-BGp
+83      81      82      2       180.000 35.000   ; GDS11, BGm-BG-BGp
+91      89      90      2       180.000 8.500    ; IDO12, BGm-BG-BGp
+99      97      98      2       180.000 35.000   ; GDS13, BGm-BG-BGp
+107     105     106     2       180.000 8.500    ; IDO14, BGm-BG-BGp
+115     113     114     2       180.000 35.000   ; GDS15, BGm-BG-BGp
+123     121     122     2       180.000 8.500    ; IDO16, BGm-BG-BGp
+131     129     130     2       180.000 35.000   ; GDS17, BGm-BG-BGp
+139     137     138     2       180.000 8.500    ; IDO18, BGm-BG-BGp
+;
+;
+;B3m-B3-B3p angles
+;atom1	atom2	atom3	func	angle	force.cons multiplicity
+7       5       6       2       180.000 3.000    ; GDS1, B3m-B3-B3p
+15      13      14      2       180.000 3.000    ; IDO2, B3m-B3-B3p
+23      21      22      2       180.000 3.000    ; GDS3, B3m-B3-B3p
+31      29      30      2       180.000 3.000    ; IDO4, B3m-B3-B3p
+39      37      38      2       180.000 3.000    ; GDS5, B3m-B3-B3p
+47      45      46      2       180.000 3.000    ; IDO6, B3m-B3-B3p
+55      53      54      2       180.000 3.000    ; GDS7, B3m-B3-B3p
+63      61      62      2       180.000 3.000    ; IDO8, B3m-B3-B3p
+71      69      70      2       180.000 3.000    ; GDS9, B3m-B3-B3p
+79      77      78      2       180.000 3.000    ; IDO10, B3m-B3-B3p
+87      85      86      2       180.000 3.000    ; GDS11, B3m-B3-B3p
+95      93      94      2       180.000 3.000    ; IDO12, B3m-B3-B3p
+103     101     102     2       180.000 3.000    ; GDS13, B3m-B3-B3p
+111     109     110     2       180.000 3.000    ; IDO14, B3m-B3-B3p
+119     117     118     2       180.000 3.000    ; GDS15, B3m-B3-B3p
+127     125     126     2       180.000 3.000    ; IDO16, B3m-B3-B3p
+135     133     134     2       180.000 3.000    ; GDS17, B3m-B3-B3p
+143     141     142     2       180.000 3.000    ; IDO18, B3m-B3-B3p
+;
+;Inter-residue angles
+;i-i-ii  angles
+;
+;B2i-BGi-BGii angles
+;atom1	atom2	atom3	funct	angle	k
+4       1       9       2       107.580 300.000  ;; GDS1-GDS1-IDO2, B2i-BGi-BGii
+12      9       17      2       125.000 100.000  ;; IDO2-IDO2-GDS3, B2i-BGi-BGii
+20      17      25      2       107.580 300.000  ;; GDS3-GDS3-IDO4, B2i-BGi-BGii
+28      25      33      2       125.000 100.000  ;; IDO4-IDO4-GDS5, B2i-BGi-BGii
+36      33      41      2       107.580 300.000  ;; GDS5-GDS5-IDO6, B2i-BGi-BGii
+44      41      49      2       125.000 100.000  ;; IDO6-IDO6-GDS7, B2i-BGi-BGii
+52      49      57      2       107.580 300.000  ;; GDS7-GDS7-IDO8, B2i-BGi-BGii
+60      57      65      2       125.000 100.000  ;; IDO8-IDO8-GDS9, B2i-BGi-BGii
+68      65      73      2       107.580 300.000  ;; GDS9-GDS9-IDO10, B2i-BGi-BGii
+76      73      81      2       125.000 100.000  ;; IDO10-IDO10-GDS11, B2i-BGi-BGii
+84      81      89      2       107.580 300.000  ;; GDS11-GDS11-IDO12, B2i-BGi-BGii
+92      89      97      2       125.000 100.000  ;; IDO12-IDO12-GDS13, B2i-BGi-BGii
+100     97      105     2       107.580 300.000  ;; GDS13-GDS13-IDO14, B2i-BGi-BGii
+108     105     113     2       125.000 100.000  ;; IDO14-IDO14-GDS15, B2i-BGi-BGii
+116     113     121     2       107.580 300.000  ;; GDS15-GDS15-IDO16, B2i-BGi-BGii
+124     121     129     2       125.000 100.000  ;; IDO16-IDO16-GDS17, B2i-BGi-BGii
+132     129     137     2       107.580 300.000  ;; GDS17-GDS17-IDO18, B2i-BGi-BGii
+;
+;
+;B3i-BGi-BGii angles
+;atom1	atom2	atom3	funct	angle	k
+5       1       9       2       56.923  300.000  ;; GDS1-GDS1-IDO2, B3i-BGi-BGii
+13      9       17      2       77.692  100.000  ;; IDO2-IDO2-GDS3, B3i-BGi-BGii
+21      17      25      2       56.923  300.000  ;; GDS3-GDS3-IDO4, B3i-BGi-BGii
+29      25      33      2       77.692  100.000  ;; IDO4-IDO4-GDS5, B3i-BGi-BGii
+37      33      41      2       56.923  300.000  ;; GDS5-GDS5-IDO6, B3i-BGi-BGii
+45      41      49      2       77.692  100.000  ;; IDO6-IDO6-GDS7, B3i-BGi-BGii
+53      49      57      2       56.923  300.000  ;; GDS7-GDS7-IDO8, B3i-BGi-BGii
+61      57      65      2       77.692  100.000  ;; IDO8-IDO8-GDS9, B3i-BGi-BGii
+69      65      73      2       56.923  300.000  ;; GDS9-GDS9-IDO10, B3i-BGi-BGii
+77      73      81      2       77.692  100.000  ;; IDO10-IDO10-GDS11, B3i-BGi-BGii
+85      81      89      2       56.923  300.000  ;; GDS11-GDS11-IDO12, B3i-BGi-BGii
+93      89      97      2       77.692  100.000  ;; IDO12-IDO12-GDS13, B3i-BGi-BGii
+101     97      105     2       56.923  300.000  ;; GDS13-GDS13-IDO14, B3i-BGi-BGii
+109     105     113     2       77.692  100.000  ;; IDO14-IDO14-GDS15, B3i-BGi-BGii
+117     113     121     2       56.923  300.000  ;; GDS15-GDS15-IDO16, B3i-BGi-BGii
+125     121     129     2       77.692  100.000  ;; IDO16-IDO16-GDS17, B3i-BGi-BGii
+133     129     137     2       56.923  300.000  ;; GDS17-GDS17-IDO18, B3i-BGi-BGii
+;
+;
+;B6i-BGi-BGii angles
+;atom1	atom2	atom3	funct	angle	k
+8       1       9       2       77.000  80.000   ;; GDS1-GDS1-IDO2, B6i-BGi-BGii
+16      9       17      2       66.000  450.000  ;; IDO2-IDO2-GDS3, B6i-BGi-BGii
+24      17      25      2       77.000  80.000   ;; GDS3-GDS3-IDO4, B6i-BGi-BGii
+32      25      33      2       66.000  450.000  ;; IDO4-IDO4-GDS5, B6i-BGi-BGii
+40      33      41      2       77.000  80.000   ;; GDS5-GDS5-IDO6, B6i-BGi-BGii
+48      41      49      2       66.000  450.000  ;; IDO6-IDO6-GDS7, B6i-BGi-BGii
+56      49      57      2       77.000  80.000   ;; GDS7-GDS7-IDO8, B6i-BGi-BGii
+64      57      65      2       66.000  450.000  ;; IDO8-IDO8-GDS9, B6i-BGi-BGii
+72      65      73      2       77.000  80.000   ;; GDS9-GDS9-IDO10, B6i-BGi-BGii
+80      73      81      2       66.000  450.000  ;; IDO10-IDO10-GDS11, B6i-BGi-BGii
+88      81      89      2       77.000  80.000   ;; GDS11-GDS11-IDO12, B6i-BGi-BGii
+96      89      97      2       66.000  450.000  ;; IDO12-IDO12-GDS13, B6i-BGi-BGii
+104     97      105     2       77.000  80.000   ;; GDS13-GDS13-IDO14, B6i-BGi-BGii
+112     105     113     2       66.000  450.000  ;; IDO14-IDO14-GDS15, B6i-BGi-BGii
+120     113     121     2       77.000  80.000   ;; GDS15-GDS15-IDO16, B6i-BGi-BGii
+128     121     129     2       66.000  450.000  ;; IDO16-IDO16-GDS17, B6i-BGi-BGii
+136     129     137     2       77.000  80.000   ;; GDS17-GDS17-IDO18, B6i-BGi-BGii
+;
+;i-ii-ii  angles
+;
+;BGi-BGii-B2ii angles
+;atom1	atom2	atom3	funct	angle	k
+1       9       12      2       65.601  450.000  ;; GDS1-IDO2-IDO2, BGi-BGii-B2ii
+9       17      20      2       68.418  450.000  ;; IDO2-GDS3-GDS3, BGi-BGii-B2ii
+17      25      28      2       65.601  450.000  ;; GDS3-IDO4-IDO4, BGi-BGii-B2ii
+25      33      36      2       68.418  450.000  ;; IDO4-GDS5-GDS5, BGi-BGii-B2ii
+33      41      44      2       65.601  450.000  ;; GDS5-IDO6-IDO6, BGi-BGii-B2ii
+41      49      52      2       68.418  450.000  ;; IDO6-GDS7-GDS7, BGi-BGii-B2ii
+49      57      60      2       65.601  450.000  ;; GDS7-IDO8-IDO8, BGi-BGii-B2ii
+57      65      68      2       68.418  450.000  ;; IDO8-GDS9-GDS9, BGi-BGii-B2ii
+65      73      76      2       65.601  450.000  ;; GDS9-IDO10-IDO10, BGi-BGii-B2ii
+73      81      84      2       68.418  450.000  ;; IDO10-GDS11-GDS11, BGi-BGii-B2ii
+81      89      92      2       65.601  450.000  ;; GDS11-IDO12-IDO12, BGi-BGii-B2ii
+89      97      100     2       68.418  450.000  ;; IDO12-GDS13-GDS13, BGi-BGii-B2ii
+97      105     108     2       65.601  450.000  ;; GDS13-IDO14-IDO14, BGi-BGii-B2ii
+105     113     116     2       68.418  450.000  ;; IDO14-GDS15-GDS15, BGi-BGii-B2ii
+113     121     124     2       65.601  450.000  ;; GDS15-IDO16-IDO16, BGi-BGii-B2ii
+121     129     132     2       68.418  450.000  ;; IDO16-GDS17-GDS17, BGi-BGii-B2ii
+129     137     140     2       65.601  450.000  ;; GDS17-IDO18-IDO18, BGi-BGii-B2ii
+;
+;
+;BGi-BGii-B3ii angles
+;atom1	atom2	atom3	funct	angle	k
+1       9       13      2       109.745 450.000  ;; GDS1-IDO2-IDO2, BGi-BGii-B3ii
+9       17      21      2       99.345  450.000  ;; IDO2-GDS3-GDS3, BGi-BGii-B3ii
+17      25      29      2       109.745 450.000  ;; GDS3-IDO4-IDO4, BGi-BGii-B3ii
+25      33      37      2       99.345  450.000  ;; IDO4-GDS5-GDS5, BGi-BGii-B3ii
+33      41      45      2       109.745 450.000  ;; GDS5-IDO6-IDO6, BGi-BGii-B3ii
+41      49      53      2       99.345  450.000  ;; IDO6-GDS7-GDS7, BGi-BGii-B3ii
+49      57      61      2       109.745 450.000  ;; GDS7-IDO8-IDO8, BGi-BGii-B3ii
+57      65      69      2       99.345  450.000  ;; IDO8-GDS9-GDS9, BGi-BGii-B3ii
+65      73      77      2       109.745 450.000  ;; GDS9-IDO10-IDO10, BGi-BGii-B3ii
+73      81      85      2       99.345  450.000  ;; IDO10-GDS11-GDS11, BGi-BGii-B3ii
+81      89      93      2       109.745 450.000  ;; GDS11-IDO12-IDO12, BGi-BGii-B3ii
+89      97      101     2       99.345  450.000  ;; IDO12-GDS13-GDS13, BGi-BGii-B3ii
+97      105     109     2       109.745 450.000  ;; GDS13-IDO14-IDO14, BGi-BGii-B3ii
+105     113     117     2       99.345  450.000  ;; IDO14-GDS15-GDS15, BGi-BGii-B3ii
+113     121     125     2       109.745 450.000  ;; GDS15-IDO16-IDO16, BGi-BGii-B3ii
+121     129     133     2       99.345  450.000  ;; IDO16-GDS17-GDS17, BGi-BGii-B3ii
+129     137     141     2       109.745 450.000  ;; GDS17-IDO18-IDO18, BGi-BGii-B3ii
+;
+;
+;BGi-BGii-B6ii angles
+;atom1	atom2	atom3	funct	angle	k
+1       9       16      2       105.033 300.000  ;; GDS1-IDO2-IDO2, BGi-BGii-B6ii
+9       17      24      2       140.000 80.000   ;; IDO2-GDS3-GDS3, BGi-BGii-B6ii
+17      25      32      2       105.033 300.000  ;; GDS3-IDO4-IDO4, BGi-BGii-B6ii
+25      33      40      2       140.000 80.000   ;; IDO4-GDS5-GDS5, BGi-BGii-B6ii
+33      41      48      2       105.033 300.000  ;; GDS5-IDO6-IDO6, BGi-BGii-B6ii
+41      49      56      2       140.000 80.000   ;; IDO6-GDS7-GDS7, BGi-BGii-B6ii
+49      57      64      2       105.033 300.000  ;; GDS7-IDO8-IDO8, BGi-BGii-B6ii
+57      65      72      2       140.000 80.000   ;; IDO8-GDS9-GDS9, BGi-BGii-B6ii
+65      73      80      2       105.033 300.000  ;; GDS9-IDO10-IDO10, BGi-BGii-B6ii
+73      81      88      2       140.000 80.000   ;; IDO10-GDS11-GDS11, BGi-BGii-B6ii
+81      89      96      2       105.033 300.000  ;; GDS11-IDO12-IDO12, BGi-BGii-B6ii
+89      97      104     2       140.000 80.000   ;; IDO12-GDS13-GDS13, BGi-BGii-B6ii
+97      105     112     2       105.033 300.000  ;; GDS13-IDO14-IDO14, BGi-BGii-B6ii
+105     113     120     2       140.000 80.000   ;; IDO14-GDS15-GDS15, BGi-BGii-B6ii
+113     121     128     2       105.033 300.000  ;; GDS15-IDO16-IDO16, BGi-BGii-B6ii
+121     129     136     2       140.000 80.000   ;; IDO16-GDS17-GDS17, BGi-BGii-B6ii
+129     137     144     2       105.033 300.000  ;; GDS17-IDO18-IDO18, BGi-BGii-B6ii
+;
+;i-ii-iii  angles
+;
+;BGi-BGii-BGiii angles
+;atom1	atom2	atom3	funct	angle	k
+1       9       17      2       175.000 125.000  ;; GDS1-IDO2-GDS3, BGi-BGii-BGiii
+9       17      25      2       150.000 125.000  ;; IDO2-GDS3-IDO4, BGi-BGii-BGiii
+17      25      33      2       175.000 125.000  ;; GDS3-IDO4-GDS5, BGi-BGii-BGiii
+25      33      41      2       150.000 125.000  ;; IDO4-GDS5-IDO6, BGi-BGii-BGiii
+33      41      49      2       175.000 125.000  ;; GDS5-IDO6-GDS7, BGi-BGii-BGiii
+41      49      57      2       150.000 125.000  ;; IDO6-GDS7-IDO8, BGi-BGii-BGiii
+49      57      65      2       175.000 125.000  ;; GDS7-IDO8-GDS9, BGi-BGii-BGiii
+57      65      73      2       150.000 125.000  ;; IDO8-GDS9-IDO10, BGi-BGii-BGiii
+65      73      81      2       175.000 125.000  ;; GDS9-IDO10-GDS11, BGi-BGii-BGiii
+73      81      89      2       150.000 125.000  ;; IDO10-GDS11-IDO12, BGi-BGii-BGiii
+81      89      97      2       175.000 125.000  ;; GDS11-IDO12-GDS13, BGi-BGii-BGiii
+89      97      105     2       150.000 125.000  ;; IDO12-GDS13-IDO14, BGi-BGii-BGiii
+97      105     113     2       175.000 125.000  ;; GDS13-IDO14-GDS15, BGi-BGii-BGiii
+105     113     121     2       150.000 125.000  ;; IDO14-GDS15-IDO16, BGi-BGii-BGiii
+113     121     129     2       175.000 125.000  ;; GDS15-IDO16-GDS17, BGi-BGii-BGiii
+121     129     137     2       150.000 125.000  ;; IDO16-GDS17-IDO18, BGi-BGii-BGiii
+;
+
+[dihedrals]
+;Inter-residue dihedrals
+;
+;
+;B2i-BGi-BGii-B2ii angles
+;atom1	atom2	atom3	atom4 funct	angle	k
+4       1       9       12      1       25.000  20.000  1        ;; GDS1-GDS1-IDO2-IDO2, B2i-BGi-BGii-B2ii
+12      9       17      20      1       115.000 20.000  1        ;; IDO2-IDO2-GDS3-GDS3, B2i-BGi-BGii-B2ii
+20      17      25      28      1       25.000  20.000  1        ;; GDS3-GDS3-IDO4-IDO4, B2i-BGi-BGii-B2ii
+28      25      33      36      1       115.000 20.000  1        ;; IDO4-IDO4-GDS5-GDS5, B2i-BGi-BGii-B2ii
+36      33      41      44      1       25.000  20.000  1        ;; GDS5-GDS5-IDO6-IDO6, B2i-BGi-BGii-B2ii
+44      41      49      52      1       115.000 20.000  1        ;; IDO6-IDO6-GDS7-GDS7, B2i-BGi-BGii-B2ii
+52      49      57      60      1       25.000  20.000  1        ;; GDS7-GDS7-IDO8-IDO8, B2i-BGi-BGii-B2ii
+60      57      65      68      1       115.000 20.000  1        ;; IDO8-IDO8-GDS9-GDS9, B2i-BGi-BGii-B2ii
+68      65      73      76      1       25.000  20.000  1        ;; GDS9-GDS9-IDO10-IDO10, B2i-BGi-BGii-B2ii
+76      73      81      84      1       115.000 20.000  1        ;; IDO10-IDO10-GDS11-GDS11, B2i-BGi-BGii-B2ii
+84      81      89      92      1       25.000  20.000  1        ;; GDS11-GDS11-IDO12-IDO12, B2i-BGi-BGii-B2ii
+92      89      97      100     1       115.000 20.000  1        ;; IDO12-IDO12-GDS13-GDS13, B2i-BGi-BGii-B2ii
+100     97      105     108     1       25.000  20.000  1        ;; GDS13-GDS13-IDO14-IDO14, B2i-BGi-BGii-B2ii
+108     105     113     116     1       115.000 20.000  1        ;; IDO14-IDO14-GDS15-GDS15, B2i-BGi-BGii-B2ii
+116     113     121     124     1       25.000  20.000  1        ;; GDS15-GDS15-IDO16-IDO16, B2i-BGi-BGii-B2ii
+124     121     129     132     1       115.000 20.000  1        ;; IDO16-IDO16-GDS17-GDS17, B2i-BGi-BGii-B2ii
+132     129     137     140     1       25.000  20.000  1        ;; GDS17-GDS17-IDO18-IDO18, B2i-BGi-BGii-B2ii
+;
+;
+;B2i-BGi-BGii-B3ii angles
+;atom1	atom2	atom3	atom4 funct	angle	k
+4       1       9       13      1       15.000  20.000  1        ;; GDS1-GDS1-IDO2-IDO2, B2i-BGi-BGii-B3ii
+12      9       17      21      1       60.000  20.000  1        ;; IDO2-IDO2-GDS3-GDS3, B2i-BGi-BGii-B3ii
+20      17      25      29      1       15.000  20.000  1        ;; GDS3-GDS3-IDO4-IDO4, B2i-BGi-BGii-B3ii
+28      25      33      37      1       60.000  20.000  1        ;; IDO4-IDO4-GDS5-GDS5, B2i-BGi-BGii-B3ii
+36      33      41      45      1       15.000  20.000  1        ;; GDS5-GDS5-IDO6-IDO6, B2i-BGi-BGii-B3ii
+44      41      49      53      1       60.000  20.000  1        ;; IDO6-IDO6-GDS7-GDS7, B2i-BGi-BGii-B3ii
+52      49      57      61      1       15.000  20.000  1        ;; GDS7-GDS7-IDO8-IDO8, B2i-BGi-BGii-B3ii
+60      57      65      69      1       60.000  20.000  1        ;; IDO8-IDO8-GDS9-GDS9, B2i-BGi-BGii-B3ii
+68      65      73      77      1       15.000  20.000  1        ;; GDS9-GDS9-IDO10-IDO10, B2i-BGi-BGii-B3ii
+76      73      81      85      1       60.000  20.000  1        ;; IDO10-IDO10-GDS11-GDS11, B2i-BGi-BGii-B3ii
+84      81      89      93      1       15.000  20.000  1        ;; GDS11-GDS11-IDO12-IDO12, B2i-BGi-BGii-B3ii
+92      89      97      101     1       60.000  20.000  1        ;; IDO12-IDO12-GDS13-GDS13, B2i-BGi-BGii-B3ii
+100     97      105     109     1       15.000  20.000  1        ;; GDS13-GDS13-IDO14-IDO14, B2i-BGi-BGii-B3ii
+108     105     113     117     1       60.000  20.000  1        ;; IDO14-IDO14-GDS15-GDS15, B2i-BGi-BGii-B3ii
+116     113     121     125     1       15.000  20.000  1        ;; GDS15-GDS15-IDO16-IDO16, B2i-BGi-BGii-B3ii
+124     121     129     133     1       60.000  20.000  1        ;; IDO16-IDO16-GDS17-GDS17, B2i-BGi-BGii-B3ii
+132     129     137     141     1       15.000  20.000  1        ;; GDS17-GDS17-IDO18-IDO18, B2i-BGi-BGii-B3ii
+;
+;
+;B2i-BGi-BGii-B6ii angles
+;atom1	atom2	atom3	atom4 funct	angle	k
+4       1       9       16      1       165.000 40.000  1        ;; GDS1-GDS1-IDO2-IDO2, B2i-BGi-BGii-B6ii
+12      9       17      24      1       255.000 15.000  1        ;; IDO2-IDO2-GDS3-GDS3, B2i-BGi-BGii-B6ii
+20      17      25      32      1       165.000 40.000  1        ;; GDS3-GDS3-IDO4-IDO4, B2i-BGi-BGii-B6ii
+28      25      33      40      1       255.000 15.000  1        ;; IDO4-IDO4-GDS5-GDS5, B2i-BGi-BGii-B6ii
+36      33      41      48      1       165.000 40.000  1        ;; GDS5-GDS5-IDO6-IDO6, B2i-BGi-BGii-B6ii
+44      41      49      56      1       255.000 15.000  1        ;; IDO6-IDO6-GDS7-GDS7, B2i-BGi-BGii-B6ii
+52      49      57      64      1       165.000 40.000  1        ;; GDS7-GDS7-IDO8-IDO8, B2i-BGi-BGii-B6ii
+60      57      65      72      1       255.000 15.000  1        ;; IDO8-IDO8-GDS9-GDS9, B2i-BGi-BGii-B6ii
+68      65      73      80      1       165.000 40.000  1        ;; GDS9-GDS9-IDO10-IDO10, B2i-BGi-BGii-B6ii
+76      73      81      88      1       255.000 15.000  1        ;; IDO10-IDO10-GDS11-GDS11, B2i-BGi-BGii-B6ii
+84      81      89      96      1       165.000 40.000  1        ;; GDS11-GDS11-IDO12-IDO12, B2i-BGi-BGii-B6ii
+92      89      97      104     1       255.000 15.000  1        ;; IDO12-IDO12-GDS13-GDS13, B2i-BGi-BGii-B6ii
+100     97      105     112     1       165.000 40.000  1        ;; GDS13-GDS13-IDO14-IDO14, B2i-BGi-BGii-B6ii
+108     105     113     120     1       255.000 15.000  1        ;; IDO14-IDO14-GDS15-GDS15, B2i-BGi-BGii-B6ii
+116     113     121     128     1       165.000 40.000  1        ;; GDS15-GDS15-IDO16-IDO16, B2i-BGi-BGii-B6ii
+124     121     129     136     1       255.000 15.000  1        ;; IDO16-IDO16-GDS17-GDS17, B2i-BGi-BGii-B6ii
+132     129     137     144     1       165.000 40.000  1        ;; GDS17-GDS17-IDO18-IDO18, B2i-BGi-BGii-B6ii
+;
+;
+;B6i-BGi-BGii-B2ii angles
+;atom1	atom2	atom3	atom4 funct	angle	k
+8       1       9       12      1       246.000 40.000  1        ;; GDS1-GDS1-IDO2-IDO2, B6i-BGi-BGii-B2ii
+16      9       17      20      1       340.000 15.000  1        ;; IDO2-IDO2-GDS3-GDS3, B6i-BGi-BGii-B2ii
+24      17      25      28      1       246.000 40.000  1        ;; GDS3-GDS3-IDO4-IDO4, B6i-BGi-BGii-B2ii
+32      25      33      36      1       340.000 15.000  1        ;; IDO4-IDO4-GDS5-GDS5, B6i-BGi-BGii-B2ii
+40      33      41      44      1       246.000 40.000  1        ;; GDS5-GDS5-IDO6-IDO6, B6i-BGi-BGii-B2ii
+48      41      49      52      1       340.000 15.000  1        ;; IDO6-IDO6-GDS7-GDS7, B6i-BGi-BGii-B2ii
+56      49      57      60      1       246.000 40.000  1        ;; GDS7-GDS7-IDO8-IDO8, B6i-BGi-BGii-B2ii
+64      57      65      68      1       340.000 15.000  1        ;; IDO8-IDO8-GDS9-GDS9, B6i-BGi-BGii-B2ii
+72      65      73      76      1       246.000 40.000  1        ;; GDS9-GDS9-IDO10-IDO10, B6i-BGi-BGii-B2ii
+80      73      81      84      1       340.000 15.000  1        ;; IDO10-IDO10-GDS11-GDS11, B6i-BGi-BGii-B2ii
+88      81      89      92      1       246.000 40.000  1        ;; GDS11-GDS11-IDO12-IDO12, B6i-BGi-BGii-B2ii
+96      89      97      100     1       340.000 15.000  1        ;; IDO12-IDO12-GDS13-GDS13, B6i-BGi-BGii-B2ii
+104     97      105     108     1       246.000 40.000  1        ;; GDS13-GDS13-IDO14-IDO14, B6i-BGi-BGii-B2ii
+112     105     113     116     1       340.000 15.000  1        ;; IDO14-IDO14-GDS15-GDS15, B6i-BGi-BGii-B2ii
+120     113     121     124     1       246.000 40.000  1        ;; GDS15-GDS15-IDO16-IDO16, B6i-BGi-BGii-B2ii
+128     121     129     132     1       340.000 15.000  1        ;; IDO16-IDO16-GDS17-GDS17, B6i-BGi-BGii-B2ii
+136     129     137     140     1       246.000 40.000  1        ;; GDS17-GDS17-IDO18-IDO18, B6i-BGi-BGii-B2ii
+;
+
+[exclusions]
+;Intra-residue exclusions
+; Exclude dummy interactions within beads
+;
+;BGm-BGp exclusions
+;atom1      atom2
+3       2       ; GDS1, BGm-BGp
+11      10      ; IDO2, BGm-BGp
+19      18      ; GDS3, BGm-BGp
+27      26      ; IDO4, BGm-BGp
+35      34      ; GDS5, BGm-BGp
+43      42      ; IDO6, BGm-BGp
+51      50      ; GDS7, BGm-BGp
+59      58      ; IDO8, BGm-BGp
+67      66      ; GDS9, BGm-BGp
+75      74      ; IDO10, BGm-BGp
+83      82      ; GDS11, BGm-BGp
+91      90      ; IDO12, BGm-BGp
+99      98      ; GDS13, BGm-BGp
+107     106     ; IDO14, BGm-BGp
+115     114     ; GDS15, BGm-BGp
+123     122     ; IDO16, BGm-BGp
+131     130     ; GDS17, BGm-BGp
+139     138     ; IDO18, BGm-BGp
+;
+;
+;B3m-B3p exclusions
+;atom1      atom2
+7       6       ; GDS1, B3m-B3p
+15      14      ; IDO2, B3m-B3p
+23      22      ; GDS3, B3m-B3p
+31      30      ; IDO4, B3m-B3p
+39      38      ; GDS5, B3m-B3p
+47      46      ; IDO6, B3m-B3p
+55      54      ; GDS7, B3m-B3p
+63      62      ; IDO8, B3m-B3p
+71      70      ; GDS9, B3m-B3p
+79      78      ; IDO10, B3m-B3p
+87      86      ; GDS11, B3m-B3p
+95      94      ; IDO12, B3m-B3p
+103     102     ; GDS13, B3m-B3p
+111     110     ; IDO14, B3m-B3p
+119     118     ; GDS15, B3m-B3p
+127     126     ; IDO16, B3m-B3p
+135     134     ; GDS17, B3m-B3p
+143     142     ; IDO18, B3m-B3p
+;
+; Exclude interactions between dummies of (main)bead 1 and dummies of (main)bead 2
+;
+;B3m-BGm exclusions
+;atom1      atom2
+7       3       ; GDS1, B3m-BGm
+15      11      ; IDO2, B3m-BGm
+23      19      ; GDS3, B3m-BGm
+31      27      ; IDO4, B3m-BGm
+39      35      ; GDS5, B3m-BGm
+47      43      ; IDO6, B3m-BGm
+55      51      ; GDS7, B3m-BGm
+63      59      ; IDO8, B3m-BGm
+71      67      ; GDS9, B3m-BGm
+79      75      ; IDO10, B3m-BGm
+87      83      ; GDS11, B3m-BGm
+95      91      ; IDO12, B3m-BGm
+103     99      ; GDS13, B3m-BGm
+111     107     ; IDO14, B3m-BGm
+119     115     ; GDS15, B3m-BGm
+127     123     ; IDO16, B3m-BGm
+135     131     ; GDS17, B3m-BGm
+143     139     ; IDO18, B3m-BGm
+;
+;
+;B3m-BGp exclusions
+;atom1      atom2
+7       2       ; GDS1, B3m-BGp
+15      10      ; IDO2, B3m-BGp
+23      18      ; GDS3, B3m-BGp
+31      26      ; IDO4, B3m-BGp
+39      34      ; GDS5, B3m-BGp
+47      42      ; IDO6, B3m-BGp
+55      50      ; GDS7, B3m-BGp
+63      58      ; IDO8, B3m-BGp
+71      66      ; GDS9, B3m-BGp
+79      74      ; IDO10, B3m-BGp
+87      82      ; GDS11, B3m-BGp
+95      90      ; IDO12, B3m-BGp
+103     98      ; GDS13, B3m-BGp
+111     106     ; IDO14, B3m-BGp
+119     114     ; GDS15, B3m-BGp
+127     122     ; IDO16, B3m-BGp
+135     130     ; GDS17, B3m-BGp
+143     138     ; IDO18, B3m-BGp
+;
+;
+;B3p-BGm exclusions
+;atom1      atom2
+6       3       ; GDS1, B3p-BGm
+14      11      ; IDO2, B3p-BGm
+22      19      ; GDS3, B3p-BGm
+30      27      ; IDO4, B3p-BGm
+38      35      ; GDS5, B3p-BGm
+46      43      ; IDO6, B3p-BGm
+54      51      ; GDS7, B3p-BGm
+62      59      ; IDO8, B3p-BGm
+70      67      ; GDS9, B3p-BGm
+78      75      ; IDO10, B3p-BGm
+86      83      ; GDS11, B3p-BGm
+94      91      ; IDO12, B3p-BGm
+102     99      ; GDS13, B3p-BGm
+110     107     ; IDO14, B3p-BGm
+118     115     ; GDS15, B3p-BGm
+126     123     ; IDO16, B3p-BGm
+134     131     ; GDS17, B3p-BGm
+142     139     ; IDO18, B3p-BGm
+;
+;
+;B3p-BGp exclusions
+;atom1      atom2
+6       2       ; GDS1, B3p-BGp
+14      10      ; IDO2, B3p-BGp
+22      18      ; GDS3, B3p-BGp
+30      26      ; IDO4, B3p-BGp
+38      34      ; GDS5, B3p-BGp
+46      42      ; IDO6, B3p-BGp
+54      50      ; GDS7, B3p-BGp
+62      58      ; IDO8, B3p-BGp
+70      66      ; GDS9, B3p-BGp
+78      74      ; IDO10, B3p-BGp
+86      82      ; GDS11, B3p-BGp
+94      90      ; IDO12, B3p-BGp
+102     98      ; GDS13, B3p-BGp
+110     106     ; IDO14, B3p-BGp
+118     114     ; GDS15, B3p-BGp
+126     122     ; IDO16, B3p-BGp
+134     130     ; GDS17, B3p-BGp
+142     138     ; IDO18, B3p-BGp
+;
+; Exclude interactions between dummies of 1 and main sites of 3
+;
+;B3m-B6 exclusions
+;atom1      atom2
+7       8       ; GDS1, B3m-B6
+15      16      ; IDO2, B3m-B6
+23      24      ; GDS3, B3m-B6
+31      32      ; IDO4, B3m-B6
+39      40      ; GDS5, B3m-B6
+47      48      ; IDO6, B3m-B6
+55      56      ; GDS7, B3m-B6
+63      64      ; IDO8, B3m-B6
+71      72      ; GDS9, B3m-B6
+79      80      ; IDO10, B3m-B6
+87      88      ; GDS11, B3m-B6
+95      96      ; IDO12, B3m-B6
+103     104     ; GDS13, B3m-B6
+111     112     ; IDO14, B3m-B6
+119     120     ; GDS15, B3m-B6
+127     128     ; IDO16, B3m-B6
+135     136     ; GDS17, B3m-B6
+143     144     ; IDO18, B3m-B6
+;
+;
+;B3p-B6 exclusions
+;atom1      atom2
+6       8       ; GDS1, B3p-B6
+14      16      ; IDO2, B3p-B6
+22      24      ; GDS3, B3p-B6
+30      32      ; IDO4, B3p-B6
+38      40      ; GDS5, B3p-B6
+46      48      ; IDO6, B3p-B6
+54      56      ; GDS7, B3p-B6
+62      64      ; IDO8, B3p-B6
+70      72      ; GDS9, B3p-B6
+78      80      ; IDO10, B3p-B6
+86      88      ; GDS11, B3p-B6
+94      96      ; IDO12, B3p-B6
+102     104     ; GDS13, B3p-B6
+110     112     ; IDO14, B3p-B6
+118     120     ; GDS15, B3p-B6
+126     128     ; IDO16, B3p-B6
+134     136     ; GDS17, B3p-B6
+142     144     ; IDO18, B3p-B6
+;
+;Inter-residue exclusions
+;
+; Exclude interactions between dummies of (main)bead 1 and dummies of (main)bead 2
+;
+;BGmi-BGmii exclusions
+;atom1      atom2
+3       11      ; GDS1-IDO2, BGmi-BGmii
+11      19      ; IDO2-GDS3, BGmi-BGmii
+19      27      ; GDS3-IDO4, BGmi-BGmii
+27      35      ; IDO4-GDS5, BGmi-BGmii
+35      43      ; GDS5-IDO6, BGmi-BGmii
+43      51      ; IDO6-GDS7, BGmi-BGmii
+51      59      ; GDS7-IDO8, BGmi-BGmii
+59      67      ; IDO8-GDS9, BGmi-BGmii
+67      75      ; GDS9-IDO10, BGmi-BGmii
+75      83      ; IDO10-GDS11, BGmi-BGmii
+83      91      ; GDS11-IDO12, BGmi-BGmii
+91      99      ; IDO12-GDS13, BGmi-BGmii
+99      107     ; GDS13-IDO14, BGmi-BGmii
+107     115     ; IDO14-GDS15, BGmi-BGmii
+115     123     ; GDS15-IDO16, BGmi-BGmii
+123     131     ; IDO16-GDS17, BGmi-BGmii
+131     139     ; GDS17-IDO18, BGmi-BGmii
+;
+;
+;BGmi-BGpii exclusions
+;atom1      atom2
+3       10      ; GDS1-IDO2, BGmi-BGpii
+11      18      ; IDO2-GDS3, BGmi-BGpii
+19      26      ; GDS3-IDO4, BGmi-BGpii
+27      34      ; IDO4-GDS5, BGmi-BGpii
+35      42      ; GDS5-IDO6, BGmi-BGpii
+43      50      ; IDO6-GDS7, BGmi-BGpii
+51      58      ; GDS7-IDO8, BGmi-BGpii
+59      66      ; IDO8-GDS9, BGmi-BGpii
+67      74      ; GDS9-IDO10, BGmi-BGpii
+75      82      ; IDO10-GDS11, BGmi-BGpii
+83      90      ; GDS11-IDO12, BGmi-BGpii
+91      98      ; IDO12-GDS13, BGmi-BGpii
+99      106     ; GDS13-IDO14, BGmi-BGpii
+107     114     ; IDO14-GDS15, BGmi-BGpii
+115     122     ; GDS15-IDO16, BGmi-BGpii
+123     130     ; IDO16-GDS17, BGmi-BGpii
+131     138     ; GDS17-IDO18, BGmi-BGpii
+;
+;
+;BGpi-BGmii exclusions
+;atom1      atom2
+2       11      ; GDS1-IDO2, BGpi-BGmii
+10      19      ; IDO2-GDS3, BGpi-BGmii
+18      27      ; GDS3-IDO4, BGpi-BGmii
+26      35      ; IDO4-GDS5, BGpi-BGmii
+34      43      ; GDS5-IDO6, BGpi-BGmii
+42      51      ; IDO6-GDS7, BGpi-BGmii
+50      59      ; GDS7-IDO8, BGpi-BGmii
+58      67      ; IDO8-GDS9, BGpi-BGmii
+66      75      ; GDS9-IDO10, BGpi-BGmii
+74      83      ; IDO10-GDS11, BGpi-BGmii
+82      91      ; GDS11-IDO12, BGpi-BGmii
+90      99      ; IDO12-GDS13, BGpi-BGmii
+98      107     ; GDS13-IDO14, BGpi-BGmii
+106     115     ; IDO14-GDS15, BGpi-BGmii
+114     123     ; GDS15-IDO16, BGpi-BGmii
+122     131     ; IDO16-GDS17, BGpi-BGmii
+130     139     ; GDS17-IDO18, BGpi-BGmii
+;
+;
+;BGpi-BGpii exclusions
+;atom1      atom2
+2       10      ; GDS1-IDO2, BGpi-BGpii
+10      18      ; IDO2-GDS3, BGpi-BGpii
+18      26      ; GDS3-IDO4, BGpi-BGpii
+26      34      ; IDO4-GDS5, BGpi-BGpii
+34      42      ; GDS5-IDO6, BGpi-BGpii
+42      50      ; IDO6-GDS7, BGpi-BGpii
+50      58      ; GDS7-IDO8, BGpi-BGpii
+58      66      ; IDO8-GDS9, BGpi-BGpii
+66      74      ; GDS9-IDO10, BGpi-BGpii
+74      82      ; IDO10-GDS11, BGpi-BGpii
+82      90      ; GDS11-IDO12, BGpi-BGpii
+90      98      ; IDO12-GDS13, BGpi-BGpii
+98      106     ; GDS13-IDO14, BGpi-BGpii
+106     114     ; IDO14-GDS15, BGpi-BGpii
+114     122     ; GDS15-IDO16, BGpi-BGpii
+122     130     ; IDO16-GDS17, BGpi-BGpii
+130     138     ; GDS17-IDO18, BGpi-BGpii
+;
+; Exclude interactions between mainsites of 1 and dummies of 3
+;
+;B2i-BGpii exclusions
+;atom1      atom2
+4       10      ; GDS1-IDO2, B2i-BGpii
+12      18      ; IDO2-GDS3, B2i-BGpii
+20      26      ; GDS3-IDO4, B2i-BGpii
+28      34      ; IDO4-GDS5, B2i-BGpii
+36      42      ; GDS5-IDO6, B2i-BGpii
+44      50      ; IDO6-GDS7, B2i-BGpii
+52      58      ; GDS7-IDO8, B2i-BGpii
+60      66      ; IDO8-GDS9, B2i-BGpii
+68      74      ; GDS9-IDO10, B2i-BGpii
+76      82      ; IDO10-GDS11, B2i-BGpii
+84      90      ; GDS11-IDO12, B2i-BGpii
+92      98      ; IDO12-GDS13, B2i-BGpii
+100     106     ; GDS13-IDO14, B2i-BGpii
+108     114     ; IDO14-GDS15, B2i-BGpii
+116     122     ; GDS15-IDO16, B2i-BGpii
+124     130     ; IDO16-GDS17, B2i-BGpii
+132     138     ; GDS17-IDO18, B2i-BGpii
+;
+;
+;B2i-BGmii exclusions
+;atom1      atom2
+4       11      ; GDS1-IDO2, B2i-BGmii
+12      19      ; IDO2-GDS3, B2i-BGmii
+20      27      ; GDS3-IDO4, B2i-BGmii
+28      35      ; IDO4-GDS5, B2i-BGmii
+36      43      ; GDS5-IDO6, B2i-BGmii
+44      51      ; IDO6-GDS7, B2i-BGmii
+52      59      ; GDS7-IDO8, B2i-BGmii
+60      67      ; IDO8-GDS9, B2i-BGmii
+68      75      ; GDS9-IDO10, B2i-BGmii
+76      83      ; IDO10-GDS11, B2i-BGmii
+84      91      ; GDS11-IDO12, B2i-BGmii
+92      99      ; IDO12-GDS13, B2i-BGmii
+100     107     ; GDS13-IDO14, B2i-BGmii
+108     115     ; IDO14-GDS15, B2i-BGmii
+116     123     ; GDS15-IDO16, B2i-BGmii
+124     131     ; IDO16-GDS17, B2i-BGmii
+132     139     ; GDS17-IDO18, B2i-BGmii
+;
+;
+;B3i-BGpii exclusions
+;atom1      atom2
+5       10      ; GDS1-IDO2, B3i-BGpii
+13      18      ; IDO2-GDS3, B3i-BGpii
+21      26      ; GDS3-IDO4, B3i-BGpii
+29      34      ; IDO4-GDS5, B3i-BGpii
+37      42      ; GDS5-IDO6, B3i-BGpii
+45      50      ; IDO6-GDS7, B3i-BGpii
+53      58      ; GDS7-IDO8, B3i-BGpii
+61      66      ; IDO8-GDS9, B3i-BGpii
+69      74      ; GDS9-IDO10, B3i-BGpii
+77      82      ; IDO10-GDS11, B3i-BGpii
+85      90      ; GDS11-IDO12, B3i-BGpii
+93      98      ; IDO12-GDS13, B3i-BGpii
+101     106     ; GDS13-IDO14, B3i-BGpii
+109     114     ; IDO14-GDS15, B3i-BGpii
+117     122     ; GDS15-IDO16, B3i-BGpii
+125     130     ; IDO16-GDS17, B3i-BGpii
+133     138     ; GDS17-IDO18, B3i-BGpii
+;
+;
+;B3i-BGmii exclusions
+;atom1      atom2
+5       11      ; GDS1-IDO2, B3i-BGmii
+13      19      ; IDO2-GDS3, B3i-BGmii
+21      27      ; GDS3-IDO4, B3i-BGmii
+29      35      ; IDO4-GDS5, B3i-BGmii
+37      43      ; GDS5-IDO6, B3i-BGmii
+45      51      ; IDO6-GDS7, B3i-BGmii
+53      59      ; GDS7-IDO8, B3i-BGmii
+61      67      ; IDO8-GDS9, B3i-BGmii
+69      75      ; GDS9-IDO10, B3i-BGmii
+77      83      ; IDO10-GDS11, B3i-BGmii
+85      91      ; GDS11-IDO12, B3i-BGmii
+93      99      ; IDO12-GDS13, B3i-BGmii
+101     107     ; GDS13-IDO14, B3i-BGmii
+109     115     ; IDO14-GDS15, B3i-BGmii
+117     123     ; GDS15-IDO16, B3i-BGmii
+125     131     ; IDO16-GDS17, B3i-BGmii
+133     139     ; GDS17-IDO18, B3i-BGmii
+;
+;
+;B6i-BGpii exclusions
+;atom1      atom2
+8       10      ; GDS1-IDO2, B6i-BGpii
+16      18      ; IDO2-GDS3, B6i-BGpii
+24      26      ; GDS3-IDO4, B6i-BGpii
+32      34      ; IDO4-GDS5, B6i-BGpii
+40      42      ; GDS5-IDO6, B6i-BGpii
+48      50      ; IDO6-GDS7, B6i-BGpii
+56      58      ; GDS7-IDO8, B6i-BGpii
+64      66      ; IDO8-GDS9, B6i-BGpii
+72      74      ; GDS9-IDO10, B6i-BGpii
+80      82      ; IDO10-GDS11, B6i-BGpii
+88      90      ; GDS11-IDO12, B6i-BGpii
+96      98      ; IDO12-GDS13, B6i-BGpii
+104     106     ; GDS13-IDO14, B6i-BGpii
+112     114     ; IDO14-GDS15, B6i-BGpii
+120     122     ; GDS15-IDO16, B6i-BGpii
+128     130     ; IDO16-GDS17, B6i-BGpii
+136     138     ; GDS17-IDO18, B6i-BGpii
+;
+;
+;B6i-BGmii exclusions
+;atom1      atom2
+8       11      ; GDS1-IDO2, B6i-BGmii
+16      19      ; IDO2-GDS3, B6i-BGmii
+24      27      ; GDS3-IDO4, B6i-BGmii
+32      35      ; IDO4-GDS5, B6i-BGmii
+40      43      ; GDS5-IDO6, B6i-BGmii
+48      51      ; IDO6-GDS7, B6i-BGmii
+56      59      ; GDS7-IDO8, B6i-BGmii
+64      67      ; IDO8-GDS9, B6i-BGmii
+72      75      ; GDS9-IDO10, B6i-BGmii
+80      83      ; IDO10-GDS11, B6i-BGmii
+88      91      ; GDS11-IDO12, B6i-BGmii
+96      99      ; IDO12-GDS13, B6i-BGmii
+104     107     ; GDS13-IDO14, B6i-BGmii
+112     115     ; IDO14-GDS15, B6i-BGmii
+120     123     ; GDS15-IDO16, B6i-BGmii
+128     131     ; IDO16-GDS17, B6i-BGmii
+136     139     ; GDS17-IDO18, B6i-BGmii
+;
+;
+;BGi-B3pii exclusions
+;atom1      atom2
+1       14      ; GDS1-IDO2, BGi-B3pii
+9       22      ; IDO2-GDS3, BGi-B3pii
+17      30      ; GDS3-IDO4, BGi-B3pii
+25      38      ; IDO4-GDS5, BGi-B3pii
+33      46      ; GDS5-IDO6, BGi-B3pii
+41      54      ; IDO6-GDS7, BGi-B3pii
+49      62      ; GDS7-IDO8, BGi-B3pii
+57      70      ; IDO8-GDS9, BGi-B3pii
+65      78      ; GDS9-IDO10, BGi-B3pii
+73      86      ; IDO10-GDS11, BGi-B3pii
+81      94      ; GDS11-IDO12, BGi-B3pii
+89      102     ; IDO12-GDS13, BGi-B3pii
+97      110     ; GDS13-IDO14, BGi-B3pii
+105     118     ; IDO14-GDS15, BGi-B3pii
+113     126     ; GDS15-IDO16, BGi-B3pii
+121     134     ; IDO16-GDS17, BGi-B3pii
+129     142     ; GDS17-IDO18, BGi-B3pii
+;
+;
+;BGi-B3mii exclusions
+;atom1      atom2
+1       15      ; GDS1-IDO2, BGi-B3mii
+9       23      ; IDO2-GDS3, BGi-B3mii
+17      31      ; GDS3-IDO4, BGi-B3mii
+25      39      ; IDO4-GDS5, BGi-B3mii
+33      47      ; GDS5-IDO6, BGi-B3mii
+41      55      ; IDO6-GDS7, BGi-B3mii
+49      63      ; GDS7-IDO8, BGi-B3mii
+57      71      ; IDO8-GDS9, BGi-B3mii
+65      79      ; GDS9-IDO10, BGi-B3mii
+73      87      ; IDO10-GDS11, BGi-B3mii
+81      95      ; GDS11-IDO12, BGi-B3mii
+89      103     ; IDO12-GDS13, BGi-B3mii
+97      111     ; GDS13-IDO14, BGi-B3mii
+105     119     ; IDO14-GDS15, BGi-B3mii
+113     127     ; GDS15-IDO16, BGi-B3mii
+121     135     ; IDO16-GDS17, BGi-B3mii
+129     143     ; GDS17-IDO18, BGi-B3mii
+;
+; Exclude interactions between dummies of 1 and mainsites of 3
+;
+;B3mi-BGii exclusions
+;atom1      atom2
+7       9       ; GDS1-IDO2, B3mi-BGii
+15      17      ; IDO2-GDS3, B3mi-BGii
+23      25      ; GDS3-IDO4, B3mi-BGii
+31      33      ; IDO4-GDS5, B3mi-BGii
+39      41      ; GDS5-IDO6, B3mi-BGii
+47      49      ; IDO6-GDS7, B3mi-BGii
+55      57      ; GDS7-IDO8, B3mi-BGii
+63      65      ; IDO8-GDS9, B3mi-BGii
+71      73      ; GDS9-IDO10, B3mi-BGii
+79      81      ; IDO10-GDS11, B3mi-BGii
+87      89      ; GDS11-IDO12, B3mi-BGii
+95      97      ; IDO12-GDS13, B3mi-BGii
+103     105     ; GDS13-IDO14, B3mi-BGii
+111     113     ; IDO14-GDS15, B3mi-BGii
+119     121     ; GDS15-IDO16, B3mi-BGii
+127     129     ; IDO16-GDS17, B3mi-BGii
+135     137     ; GDS17-IDO18, B3mi-BGii
+;
+;
+;B3pi-BGii exclusions
+;atom1      atom2
+6       9       ; GDS1-IDO2, B3pi-BGii
+14      17      ; IDO2-GDS3, B3pi-BGii
+22      25      ; GDS3-IDO4, B3pi-BGii
+30      33      ; IDO4-GDS5, B3pi-BGii
+38      41      ; GDS5-IDO6, B3pi-BGii
+46      49      ; IDO6-GDS7, B3pi-BGii
+54      57      ; GDS7-IDO8, B3pi-BGii
+62      65      ; IDO8-GDS9, B3pi-BGii
+70      73      ; GDS9-IDO10, B3pi-BGii
+78      81      ; IDO10-GDS11, B3pi-BGii
+86      89      ; GDS11-IDO12, B3pi-BGii
+94      97      ; IDO12-GDS13, B3pi-BGii
+102     105     ; GDS13-IDO14, B3pi-BGii
+110     113     ; IDO14-GDS15, B3pi-BGii
+118     121     ; GDS15-IDO16, B3pi-BGii
+126     129     ; IDO16-GDS17, B3pi-BGii
+134     137     ; GDS17-IDO18, B3pi-BGii
+;
+;
+;BGmi-B2ii exclusions
+;atom1      atom2
+3       12      ; GDS1-IDO2, BGmi-B2ii
+11      20      ; IDO2-GDS3, BGmi-B2ii
+19      28      ; GDS3-IDO4, BGmi-B2ii
+27      36      ; IDO4-GDS5, BGmi-B2ii
+35      44      ; GDS5-IDO6, BGmi-B2ii
+43      52      ; IDO6-GDS7, BGmi-B2ii
+51      60      ; GDS7-IDO8, BGmi-B2ii
+59      68      ; IDO8-GDS9, BGmi-B2ii
+67      76      ; GDS9-IDO10, BGmi-B2ii
+75      84      ; IDO10-GDS11, BGmi-B2ii
+83      92      ; GDS11-IDO12, BGmi-B2ii
+91      100     ; IDO12-GDS13, BGmi-B2ii
+99      108     ; GDS13-IDO14, BGmi-B2ii
+107     116     ; IDO14-GDS15, BGmi-B2ii
+115     124     ; GDS15-IDO16, BGmi-B2ii
+123     132     ; IDO16-GDS17, BGmi-B2ii
+131     140     ; GDS17-IDO18, BGmi-B2ii
+;
+;
+;BGmi-B3ii exclusions
+;atom1      atom2
+3       13      ; GDS1-IDO2, BGmi-B3ii
+11      21      ; IDO2-GDS3, BGmi-B3ii
+19      29      ; GDS3-IDO4, BGmi-B3ii
+27      37      ; IDO4-GDS5, BGmi-B3ii
+35      45      ; GDS5-IDO6, BGmi-B3ii
+43      53      ; IDO6-GDS7, BGmi-B3ii
+51      61      ; GDS7-IDO8, BGmi-B3ii
+59      69      ; IDO8-GDS9, BGmi-B3ii
+67      77      ; GDS9-IDO10, BGmi-B3ii
+75      85      ; IDO10-GDS11, BGmi-B3ii
+83      93      ; GDS11-IDO12, BGmi-B3ii
+91      101     ; IDO12-GDS13, BGmi-B3ii
+99      109     ; GDS13-IDO14, BGmi-B3ii
+107     117     ; IDO14-GDS15, BGmi-B3ii
+115     125     ; GDS15-IDO16, BGmi-B3ii
+123     133     ; IDO16-GDS17, BGmi-B3ii
+131     141     ; GDS17-IDO18, BGmi-B3ii
+;
+;
+;BGmi-B6ii exclusions
+;atom1      atom2
+3       16      ; GDS1-IDO2, BGmi-B6ii
+11      24      ; IDO2-GDS3, BGmi-B6ii
+19      32      ; GDS3-IDO4, BGmi-B6ii
+27      40      ; IDO4-GDS5, BGmi-B6ii
+35      48      ; GDS5-IDO6, BGmi-B6ii
+43      56      ; IDO6-GDS7, BGmi-B6ii
+51      64      ; GDS7-IDO8, BGmi-B6ii
+59      72      ; IDO8-GDS9, BGmi-B6ii
+67      80      ; GDS9-IDO10, BGmi-B6ii
+75      88      ; IDO10-GDS11, BGmi-B6ii
+83      96      ; GDS11-IDO12, BGmi-B6ii
+91      104     ; IDO12-GDS13, BGmi-B6ii
+99      112     ; GDS13-IDO14, BGmi-B6ii
+107     120     ; IDO14-GDS15, BGmi-B6ii
+115     128     ; GDS15-IDO16, BGmi-B6ii
+123     136     ; IDO16-GDS17, BGmi-B6ii
+131     144     ; GDS17-IDO18, BGmi-B6ii
+;
+;
+;BGpi-B2ii exclusions
+;atom1      atom2
+2       12      ; GDS1-IDO2, BGpi-B2ii
+10      20      ; IDO2-GDS3, BGpi-B2ii
+18      28      ; GDS3-IDO4, BGpi-B2ii
+26      36      ; IDO4-GDS5, BGpi-B2ii
+34      44      ; GDS5-IDO6, BGpi-B2ii
+42      52      ; IDO6-GDS7, BGpi-B2ii
+50      60      ; GDS7-IDO8, BGpi-B2ii
+58      68      ; IDO8-GDS9, BGpi-B2ii
+66      76      ; GDS9-IDO10, BGpi-B2ii
+74      84      ; IDO10-GDS11, BGpi-B2ii
+82      92      ; GDS11-IDO12, BGpi-B2ii
+90      100     ; IDO12-GDS13, BGpi-B2ii
+98      108     ; GDS13-IDO14, BGpi-B2ii
+106     116     ; IDO14-GDS15, BGpi-B2ii
+114     124     ; GDS15-IDO16, BGpi-B2ii
+122     132     ; IDO16-GDS17, BGpi-B2ii
+130     140     ; GDS17-IDO18, BGpi-B2ii
+;
+;
+;BGpi-B6ii exclusions
+;atom1      atom2
+2       16      ; GDS1-IDO2, BGpi-B6ii
+10      24      ; IDO2-GDS3, BGpi-B6ii
+18      32      ; GDS3-IDO4, BGpi-B6ii
+26      40      ; IDO4-GDS5, BGpi-B6ii
+34      48      ; GDS5-IDO6, BGpi-B6ii
+42      56      ; IDO6-GDS7, BGpi-B6ii
+50      64      ; GDS7-IDO8, BGpi-B6ii
+58      72      ; IDO8-GDS9, BGpi-B6ii
+66      80      ; GDS9-IDO10, BGpi-B6ii
+74      88      ; IDO10-GDS11, BGpi-B6ii
+82      96      ; GDS11-IDO12, BGpi-B6ii
+90      104     ; IDO12-GDS13, BGpi-B6ii
+98      112     ; GDS13-IDO14, BGpi-B6ii
+106     120     ; IDO14-GDS15, BGpi-B6ii
+114     128     ; GDS15-IDO16, BGpi-B6ii
+122     136     ; IDO16-GDS17, BGpi-B6ii
+130     144     ; GDS17-IDO18, BGpi-B6ii
+;
+;
+;BGpi-B3ii exclusions
+;atom1      atom2
+2       13      ; GDS1-IDO2, BGpi-B3ii
+10      21      ; IDO2-GDS3, BGpi-B3ii
+18      29      ; GDS3-IDO4, BGpi-B3ii
+26      37      ; IDO4-GDS5, BGpi-B3ii
+34      45      ; GDS5-IDO6, BGpi-B3ii
+42      53      ; IDO6-GDS7, BGpi-B3ii
+50      61      ; GDS7-IDO8, BGpi-B3ii
+58      69      ; IDO8-GDS9, BGpi-B3ii
+66      77      ; GDS9-IDO10, BGpi-B3ii
+74      85      ; IDO10-GDS11, BGpi-B3ii
+82      93      ; GDS11-IDO12, BGpi-B3ii
+90      101     ; IDO12-GDS13, BGpi-B3ii
+98      109     ; GDS13-IDO14, BGpi-B3ii
+106     117     ; IDO14-GDS15, BGpi-B3ii
+114     125     ; GDS15-IDO16, BGpi-B3ii
+122     133     ; IDO16-GDS17, BGpi-B3ii
+130     141     ; GDS17-IDO18, BGpi-B3ii
+;
+; Interactions between dummies of 1 and main sites of 2 are excluded by nrexcl = 2
+; Interactions between mainsites of 1 and main sites of 2 are excluded by nrexcl = 2
+;

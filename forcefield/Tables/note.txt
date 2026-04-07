@@ -1,0 +1,5 @@
+The table_d1.xvg provided in this directory is a Turn_2 potential, provided
+later by Abhilash.
+table_d3.xvg provided in this directory is a beta-sheet potential, provided by
+Peiyin on 29th June, 2022.
+

@@ -1,0 +1,50 @@
+#include "../../forcefield/ff_1hp_8SS14.itp"
+#include "../../forcefield/water.md.itp"
+#include "../../forcefield/martini_v2.0_ions.itp"
+
+#ifdef POSRE
+#include "../../forcefield/PEP_CSS14/pep1.itp"
+#include "../../forcefield/posre_itps/css14_posre.itp"
+#include "../../forcefield/PEP_CSS14/pep2.itp"
+#include "../../forcefield/posre_itps/css14_posre.itp"
+#include "../../forcefield/PEP_CSS14/pep3.itp"
+#include "../../forcefield/posre_itps/css14_posre.itp"
+#include "../../forcefield/PEP_CSS14/pep4.itp"
+#include "../../forcefield/posre_itps/css14_posre.itp"
+#include "../../forcefield/PEP_CSS14/pep5.itp"
+#include "../../forcefield/posre_itps/css14_posre.itp"
+#include "../../forcefield/PEP_CSS14/pep6.itp"
+#include "../../forcefield/posre_itps/css14_posre.itp"
+#include "../../forcefield/PEP_CSS14/pep7.itp"
+#include "../../forcefield/posre_itps/css14_posre.itp"
+#include "../../forcefield/PEP_CSS14/pep8.itp"
+#include "../../forcefield/posre_itps/css14_posre.itp"
+#include "../../forcefield/heparin.itp"
+#include "../../forcefield/posre_itps/heparin_posre.itp"
+#else
+#include "../../forcefield/PEP_CSS14/pep1.itp"
+#include "../../forcefield/PEP_CSS14/pep2.itp"
+#include "../../forcefield/PEP_CSS14/pep3.itp"
+#include "../../forcefield/PEP_CSS14/pep4.itp"
+#include "../../forcefield/PEP_CSS14/pep5.itp"
+#include "../../forcefield/PEP_CSS14/pep6.itp"
+#include "../../forcefield/PEP_CSS14/pep7.itp"
+#include "../../forcefield/PEP_CSS14/pep8.itp"
+#include "../../forcefield/heparin.itp"
+#endif
+
+[ system ]
+Modified SS14 AGCKNFFWKTFTSC in water
+
+[ molecules ]
+
+Protein1         1
+Protein2         1
+Protein3         1
+Protein4         1
+Protein5         1
+Protein6         1
+Protein7         1
+Protein8         1
+PW          12922
+CL               16

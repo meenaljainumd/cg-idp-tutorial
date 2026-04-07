@@ -1,0 +1,21 @@
+# GROMACS trajectory and large output files
+*.xtc
+*.trr
+*.edr
+*.cpt
+*.log
+*.tpr
+#*#
+
+# Backups
+*~
+*.bak
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS junk
+.DS_Store
+Thumbs.db
