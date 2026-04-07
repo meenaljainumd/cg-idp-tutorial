@@ -1,4 +1,4 @@
-This tutorial walks students through setting up and running coarse-grained molecular dynamics (CG-MD) simulations of intrinsically disordered peptides using the ProMPT force field (https://pubs.acs.org/doi/10.1021/acs.jctc.2c00269) in GROMACS. It was developed as course material for **BIOE464**, taught by **Dr. Silvina Matysiak** at the University of Maryland.
+This tutorial walks students through setting up and running coarse-grained molecular dynamics (CG-MD) simulations of intrinsically disordered peptides using the ProMPT force field (https://pubs.acs.org/doi/10.1021/acs.jctc.2c00269) in GROMACS. It is developed as course material for **BIOE464**, taught by **Dr. Silvina Matysiak** at the University of Maryland.
 
 Students will learn to set up and run CG-MD simulations of three
 peptide systems, somatostatin (SS14), cyclic somatostatin (CSS14), and pituitary adenylate cyclase-activating polypeptide (PACAP27), with and without heparin. For details on how heparin was parameterized, please refer to https://doi.org/10.1039/D4CP02331E. 
@@ -115,7 +115,7 @@ cg-idp-tutorial
 This tutorial walks you through every step required to set up a coarse-grained
 molecular dynamics simulation of 8 intrinsically disordered peptides, with or
 without one molecule of dp18 heparin, using the ProMPT force field. We'll use
-**PACAP27** as the running example — the same steps apply to SS14 and CSS14.
+**PACAP27** as the running example, the same steps apply to SS14 and CSS14.
 
 The tutorial assumes you are working from the root of the `cg-idp-tutorial`
 repository and have GROMACS 2019.4+ available in your `$PATH`.
