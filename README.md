@@ -143,7 +143,7 @@ If you already have a CG starting structure (for example, the ones in
 to convert an all-atom PDB file into a ProMPT-ready CG `.gro` file.
 
 ```bash
-python ./scripts/aa2cg.py -f 2MI1.pdb -o complete.gro -ff elnedyn22 -b 12
+python ./scripts/aa2cg.py -f 2MI1.pdb -o cg_prompt.gro -ff elnedyn22 -b 12
 ```
 
 The script runs `martinize2` to build a Martini 2 coarse-grained structure,
@@ -184,10 +184,10 @@ pep_seq    = "AGCKNFFWKTFTSC"        # sequence of the peptide (one-letter code)
 
 Run all cells. The notebook generates the system-level force field file
 containing cation-π interaction parameters. Move the resulting `.itp` into
-`forcefield/` with a descriptive name, for example:
+`forcefield/` with a descriptive name:
 
 ```bash
-mv ff.itp forcefield/ff_1hp_8SS14.itp
+mv ff.itp forcefield/ff_1hp_8PACAP27.itp
 ```
 
 Pre-built versions for PACAP27 and SS14 are already included in `forcefield/`
@@ -213,21 +213,21 @@ Then run `scripts/genitp_batch_of_peptides.py`. The available arguments are:
 | `-bbdih_fc`, `--backbone_dih_force_constant` | Force constant for backbone dihedrals (kJ/mol) | `2` |
 | `-cys`, `--make_cys_bridge` | Turn on a disulfide bridge between the two cysteines in the peptide | `0` |
 
-**Important:** for **CSS14** (cyclic somatostatin-14), set `-cys 1` to enable
-the Cys3–Cys14 disulfide bridge that makes the peptide cyclic:
 
 ```bash
 python ./scripts/genitp_batch_of_peptides.py \
-    -o forcefield/PEP_CSS14/ \
+    -o forcefield/PEP_PACAP27/ \
     -f seq.txt \
     -count 8 \
     -bbdih 6 \
     -bbdih_fc 0 \
-    -cys 1
+    -cys 0
 ```
 
-For SS14 and PACAP27, use `-cys 0` (and point `-o` to the corresponding
-`PEP_SS14/` or `PEP_PACAP27/` directory).
+For SS14 , use `-cys 0` (and point `-o` to the corresponding `PEP_SS14/` directory).
+
+**Important:** for **CSS14** (cyclic somatostatin-14), set `-cys 1` to enable
+the Cys3–Cys14 disulfide bridge that makes the peptide cyclic:
 
 This produces 8 files, `pep1.itp` through `pep8.itp`, one per peptide in the
 system. Pre-built versions for all three peptides are already in
@@ -243,8 +243,7 @@ and are provided in `forcefield/` and `gro_files/` respectively.
 ## Step 4: Build the simulation box
 
 We'll build two box configurations per peptide system: one with only peptides
-(`no_hp`), and one with peptides + 1 heparin (`with_hp`). The example below is
-for PACAP27 — swap in `ss14.gro` or `css14.gro` for the other systems.
+(`no_hp`), and one with peptides + 1 heparin (`with_hp`). 
 
 ### 4a. Insert 8 peptides into a 12 × 12 × 12 nm box
 
@@ -260,7 +259,7 @@ gmx insert-molecules \
 
 This `8pep.gro` is the starting configuration for the `no_hp` directory.
 
-### 4b. Add 1 heparin molecule on top of the 8 peptides
+### 4b. Add a heparin molecule 
 
 ```bash
 gmx insert-molecules \
@@ -273,10 +272,9 @@ gmx insert-molecules \
 
 This `8pep_1hp.gro` is the starting configuration for the `with_hp` directory.
 
-## Step 5: Solvate, neutralize, and run energy minimization + equilibration
+## Step 5: Solvate, neutralize, energy minimize and equilibrate
 
-The next steps are identical for `no_hp` and `with_hp` — only the input
-`.gro` file differs:
+The next steps are identical for `no_hp` and `with_hp`, only the input `.gro` file differs:
 
 - **`no_hp/`** uses `8pep.gro`
 - **`with_hp/`** uses `8pep_1hp.gro`
@@ -286,15 +284,6 @@ the corresponding starting `.gro` file and `topol.top` are present, then:
 
 ### 5a. Solvate with polarizable water
 
-The energy minimization step uses a slightly different water topology
-(`water.em.itp`) than the production MD (`water.md.itp`). Before solvating,
-make sure `topol.top` points to the energy-minimization version:
-
-```bash
-sed -i "s:water.md.itp:water.em.itp:g" topol.top
-```
-
-Then solvate:
 
 ```bash
 gmx solvate \
@@ -325,6 +314,14 @@ gmx genion \
 
 ### 5c. Energy minimization
 
+The energy minimization step uses a slightly different water topology
+(`water.em.itp`) than the production MD (`water.md.itp`). Make sure `topol.top` points to the 
+energy-minimization version:
+
+```bash
+sed -i "s:water.md.itp:water.em.itp:g" topol.top
+```
+
 ```bash
 gmx grompp \
     -f ../../mdp_files/em.mdp \
@@ -340,8 +337,7 @@ gmx mdrun \
     -tableb ../../forcefield/Tables/table*
 ```
 
-The `-tableb` flag is essential — ProMPT uses tabulated potentials for
-amino-acid-specific bonded interactions, and the tables in `forcefield/Tables/`
+The `-tableb` flag is essential, ProMPT uses tabulated potentials for bonded interactions, and the tables in `forcefield/Tables/`
 must be passed to every `mdrun` call.
 
 ### 5d. NPT equilibration
@@ -385,7 +381,7 @@ files do not store bond connectivity, you need to first extract a PDB file
 from the `.tpr` topology using `scripts/tpr2pdb.py`:
 
 ```bash
-python ../../scripts/tpr2pdb.py -s eq.tpr -x eq.xtc -o eq.pdb
+python ../../scripts/tpr2pdb.py -s eq.tpr -x eq.xtc/eq.gro -o eq.pdb
 ```
 
 Then open VMD with the PDB as the topology reference and the XTC as the
