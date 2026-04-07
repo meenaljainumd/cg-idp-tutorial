@@ -15,7 +15,7 @@ Each peptide folder contains two setups: `with_hp/` (with heparin dp18)
 and `no_hp/` (peptide in water).
 
 ## Repository layout
-'''
+```
 cg-idp-tutorial
 │   README.md
 │
@@ -101,7 +101,8 @@ cg-idp-tutorial
     └───with_hp/
         │   eq.gro
         │   topol.top
-'''
+
+```
 
 ## Requirements
 
@@ -415,4 +416,4 @@ your setup.
 ## Further reading
 
 For the original tutorial on setting up ProMPT simulations of amyloid peptides with heparin, see the companion repository:
-[suhasgotla/heparin_amyloid_self-assembly](https://github.com/suhasgotla/heparin_amyloid_self-assembly). 
+[suhasgotla/heparin_amyloid_self-assembly](https://github.com/suhasgotla/heparin_amyloid_self-assembly).
