@@ -1,5 +1,5 @@
 #!/bin/csh
-#SBATCH -J PACAP27                      # job name (change per system)
+#SBATCH -J SS14                      # job name (change per system)
 #SBATCH -o run.o%j                      # stdout/stderr log file
 #SBATCH -n 128                          # number of cores
 #SBATCH -t 00-12:15:00                  # wall time (DD-HH:MM:SS)
@@ -10,15 +10,13 @@
 module load gromacs/2019.4/gcc
 
 # Change this to the absolute path of your simulation directory
-cd /home/your_username/scratch/cg-idp-tutorial/PACAP27/with_hp
+cd /home/your_username/scratch/cg-idp-tutorial/SS14/with_hp
 
 # Run GROMACS with the ProMPT tabulated potentials.
 # The -cpi flag tells mdrun to resume from the checkpoint file if one exists,
 # which makes the script safe to re-submit after a wall-time interruption.
-# For a fresh production run, change "-deffnm eq" to "-deffnm run" (or
-# whatever basename you prefer) and keep -cpi to allow restarts.
 mpirun -np 128 gmx_mpi mdrun \
-    -deffnm eq \
+    -deffnm run \
     -v \
-    -cpi eq \
+    -cpi run \
     -tableb ../../forcefield/Tables/table*
