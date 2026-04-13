@@ -53,6 +53,7 @@ cg-idp-tutorial
 └───mdp_files/
 │   │   em.mdp                # energy minimization parameters
 │   │   eq.mdp                # NPT equilibration parameters
+│   │   md.mdp                # production MD parameters (500 ns)
 │
 └───scripts/
 │   │   aa2cg.py              # convert an all-atom peptide PDB to a
@@ -73,10 +74,12 @@ cg-idp-tutorial
 │   └───no_hp/                # 8 peptides, no heparin
 │   │   │   eq.gro            # equilibrated CG structure
 │   │   │   topol.top         # system topology
+│   │   │   run.tpr           # ready-to-run production MD input
 │   │
 │   └───with_hp/              # 8 peptides + 1 dp18 heparin
 │       │   eq.gro
 │       │   topol.top
+│       │   run.tpr
 │
 └───CSS14/                    # per-system setup for cyclic SS14
 │   │   8pep.gro
@@ -85,10 +88,12 @@ cg-idp-tutorial
 │   └───no_hp/
 │   │   │   eq.gro
 │   │   │   topol.top
+│   │   │   run.tpr
 │   │
 │   └───with_hp/
 │       │   eq.gro
 │       │   topol.top
+│       │   run.tpr
 │
 └───PACAP27/                  # per-system setup for PACAP27
     │   8pep.gro
@@ -97,44 +102,65 @@ cg-idp-tutorial
     └───no_hp/
     │   │   eq.gro
     │   │   topol.top
+    │   │   run.tpr
     │
     └───with_hp/
         │   eq.gro
         │   topol.top
-
+        │   run.tpr
 ```
 
 ## Requirements
-
-- GROMACS 2019.4 
-- Python 3 with numpy and MDAnalysis
-- martinize2 (`pip install vermouth`) — for `scripts/aa2cg.py`
+- Access to UMD's Zaratan HPC cluster (GROMACS 2019.4 module)
+- Python 3 with numpy, MDAnalysis, and vermouth (installed in Step 0)
 
 # Tutorial: Setting up a CG-MD simulation of 8 peptides (± heparin)
 
 This tutorial walks you through every step required to set up a coarse-grained
 molecular dynamics simulation of 8 intrinsically disordered peptides, with or
 without one molecule of dp18 heparin, using the ProMPT force field. We'll use
-**PACAP27** as the running example, the same steps apply to SS14 and CSS14.
+**SS14** as the running example, the same steps apply to CSS14 and PACAP27.
 
-The tutorial assumes you are working from the root of the `cg-idp-tutorial`
-repository and have GROMACS 2019.4+ available in your `$PATH`.
+The entire workflow runs on UMD's [Zaratan](https://hpcc.umd.edu/) HPC cluster.
 
-## Prerequisites
+## Step 0: Transfer files to Zaratan
 
-Install Python dependencies:
-
-```bash
-pip install numpy MDAnalysis vermouth
-```
-
-`vermouth` provides the `martinize2` command used in Step 1.
-
-Make sure GROMACS is loaded:
+Download the repository as a ZIP from the GitHub page. From your laptop, transfer the ZIP to your Zaratan scratch directory:
 
 ```bash
-gmx --version
+scp -rp cg-idp-tutorial-main.zip <username>@login.zaratan.umd.edu:/home/<username>/scratch/
 ```
+
+Enter your UMD password and approve the Duo push notification when prompted. Replace `<username>` with your Zaratan username.
+
+Then log in to Zaratan and unzip the archive:
+
+```bash
+ssh <username>@login.zaratan.umd.edu
+cd /home/<username>/scratch/
+unzip cg-idp-tutorial-main.zip
+cd cg-idp-tutorial-main
+```
+
+## Prerequisites (on Zaratan)
+
+Load Python and install the Python dependencies (one-time setup):
+
+```bash
+module load python
+pip install --user numpy MDAnalysis vermouth
+```
+
+The `--user` flag installs packages into your home directory since you don't have sudo access on Zaratan. `vermouth` provides the `martinize2` command used in Step 1.
+
+Load GROMACS:
+
+```bash
+module load gromacs
+gmx_mpi --version
+```
+
+On Zaratan, the GROMACS command is `gmx_mpi` (not `gmx`), since it's the MPI-enabled build.
 
 ## Step 1: Generate a CG representation from an all-atom PDB
 
@@ -143,9 +169,8 @@ If you already have a CG starting structure (for example, the ones in
 to convert an all-atom PDB file into a ProMPT-ready CG `.gro` file.
 
 ```bash
-python ./scripts/aa2cg.py -f 2MI1.pdb -o cg_prompt.gro -ff elnedyn22 -b 12
+python ./scripts/aa2cg.py -f ./PDBs/2MI1.pdb -o cg_prompt.gro -ff elnedyn22 -b 12
 ```
-
 The script runs `martinize2` to build a Martini 2 coarse-grained structure,
 then expands it into a ProMPT representation by adding backbone dummy beads
 (`BBp`, `BBm`), side-chain dummies for polar and aromatic residues, and the
@@ -164,7 +189,7 @@ The three starting CG structures used in this tutorial (`ss14.gro`,
 `css14.gro`, `pacap27.gro`) were generated this way and are provided in
 `gro_files/` so you can reproduce the full workflow without running Step 1.
 
-## Step 2: Build the force field `.itp` files
+## Step 2: Force field `.itp` files (pre-built)
 
 The ProMPT force field needs two types of `.itp` files for each system:
 
@@ -173,65 +198,7 @@ The ProMPT force field needs two types of `.itp` files for each system:
 2. A set of **per-peptide topology files** (`pep1.itp` ... `pep8.itp`) that
    define each peptide's bonded terms.
 
-### 2a. Build the system-level `ff.itp`
-
-Open `scripts/build_ff_itp.ipynb` in Jupyter and change two variables:
-
-```python
-n_peptides = 8                       # number of peptides in the system
-pep_seq    = "AGCKNFFWKTFTSC"        # sequence of the peptide (one-letter code)
-```
-
-Run all cells. The notebook generates the system-level force field file
-containing cation-π interaction parameters. Move the resulting `.itp` into
-`forcefield/` with a descriptive name:
-
-```bash
-mv ff.itp forcefield/ff_1hp_8PACAP27.itp
-```
-
-Pre-built versions for PACAP27 and SS14 are already included in `forcefield/`
-as `ff_1hp_8PACAP27.itp` and `ff_1hp_8SS14.itp`.
-
-### 2b. Build the per-peptide `.itp` files
-
-First, create a one-line text file containing your peptide sequence, for
-example `seq.txt`:
-
-```
-HSDGIFTDSYSRYRKQMAVKKYLAAVL
-```
-
-Then run `scripts/genitp_batch_of_peptides.py`. The available arguments are:
-
-| Flag | Description | Default |
-|------|-------------|---------|
-| `-o`, `--output_dir` | Output directory | required |
-| `-f`, `--input_seq` | Path to text file containing the peptide sequence | required |
-| `-count`, `--peptide_count` | Number of peptides in the system | required |
-| `-bbdih`, `--backbone_dih_type` | Type of backbone dihedral (6 = double-well potential) | `6` |
-| `-bbdih_fc`, `--backbone_dih_force_constant` | Force constant for backbone dihedrals (kJ/mol) | `2` |
-| `-cys`, `--make_cys_bridge` | Turn on a disulfide bridge between the two cysteines in the peptide | `0` |
-
-
-```bash
-python ./scripts/genitp_batch_of_peptides.py \
-    -o forcefield/PEP_PACAP27/ \
-    -f seq.txt \
-    -count 8 \
-    -bbdih 6 \
-    -bbdih_fc 0 \
-    -cys 0
-```
-
-For SS14 , use `-cys 0` (and point `-o` to the corresponding `PEP_SS14/` directory).
-
-**Important:** for **CSS14** (cyclic somatostatin-14), set `-cys 1` to enable
-the Cys3–Cys14 disulfide bridge that makes the peptide cyclic:
-
-This produces 8 files, `pep1.itp` through `pep8.itp`, one per peptide in the
-system. Pre-built versions for all three peptides are already in
-`forcefield/PEP_SS14/`, `forcefield/PEP_CSS14/`, and `forcefield/PEP_PACAP27/`.
+**Pre-built versions for all three peptides are already included in the repository** (`forcefield/ff_1hp_8*.itp` and `forcefield/PEP_*/`), so you can proceed directly to Step 3. If you want to build these files from scratch see the [Optional: Building itp files yourself] section at the end of this tutorial. Note that building the system-level `ff.itp` requires a Jupyter notebook, so this is easier to do on your laptop than on Zaratan.
 
 ## Step 3: Heparin topology and starting structure
 
@@ -248,13 +215,10 @@ We'll build two box configurations per peptide system: one with only peptides
 ### 4a. Insert 8 peptides into a 12 × 12 × 12 nm box
 
 ```bash
-cd PACAP27
-gmx insert-molecules \
-    -ci ../gro_files/pacap27.gro \
-    -nmol 8 \
-    -box 12 12 12 \
-    -radius 0.5 \
-    -o 8pep.gro
+cd SS14/
+```
+```bash
+gmx_mpi insert-molecules -ci ../gro_files/ss14.gro -nmol 8 -box 12 12 12 -radius 0.5 -o 8pep.gro
 ```
 
 This `8pep.gro` is the starting configuration for the `no_hp` directory.
@@ -262,12 +226,7 @@ This `8pep.gro` is the starting configuration for the `no_hp` directory.
 ### 4b. Add a heparin molecule 
 
 ```bash
-gmx insert-molecules \
-    -ci ../gro_files/heparin_dp18.gro \
-    -nmol 1 \
-    -f 8pep.gro \
-    -radius 0.5 \
-    -o 8pep_1hp.gro
+gmx_mpi insert-molecules -ci ../gro_files/heparin_dp18.gro -nmol 1 -f 8pep.gro -radius 0.5 -o 8pep_1hp.gro
 ```
 
 This `8pep_1hp.gro` is the starting configuration for the `with_hp` directory.
@@ -279,38 +238,35 @@ The next steps are identical for `no_hp` and `with_hp`, only the input `.gro` fi
 - **`no_hp/`** uses `8pep.gro`
 - **`with_hp/`** uses `8pep_1hp.gro`
 
-Enter the appropriate sub-directory (e.g. `PACAP27/with_hp/`) and make sure
+Enter the appropriate sub-directory (e.g. `SS14/with_hp/`) and make sure
 the corresponding starting `.gro` file and `topol.top` are present, then:
+
+```bash
+cd with_hp
+```
 
 ### 5a. Solvate with polarizable water
 
-
 ```bash
-gmx solvate \
-    -cp 8pep_1hp.gro \
-    -cs ../../gro_files/water_8.gro \
-    -p topol.top \
-    -o solv.gro
+gmx_mpi solvate -cp ../8pep_1hp.gro -cs ../../gro_files/water_8.gro -p topol.top -o solv.gro
 ```
 
-(Replace `8pep_1hp.gro` with `8pep.gro` for the `no_hp` case.)
+(Replace `../8pep_1hp.gro` with `../8pep.gro` for the `no_hp` case.)
 
 ### 5b. Neutralize with counterions
+Build the `.tpr` for ion placement:
 
 ```bash
-gmx grompp \
-    -f ../../mdp_files/em.mdp \
-    -c solv.gro -r solv.gro \
-    -p topol.top \
-    -o ions.tpr \
-    -maxwarn 1
-
-gmx genion \
-    -s ions.tpr \
-    -o solv_neutral.gro \
-    -p topol.top \
-    -neutral
+gmx_mpi grompp -f ../../mdp_files/em.mdp -c solv.gro -r solv.gro -p topol.top -o ions.tpr -maxwarn 1
 ```
+
+Then run `genion`. When prompted for the group to replace with ions, select **PW** (polarizable water):
+
+```bash
+echo "PW" | gmx_mpi genion -s ions.tpr -o solv_neutral.gro -p topol.top -neutral
+```
+
+> **About `-maxwarn`:** `-maxwarn 1` tells `grompp` to proceed despite one warning. If you see more warnings, increase the number (e.g. `-maxwarn 2`), but **read each warning first**. Most are harmless (e.g., net system charge before neutralization, which is exactly why we are about to run `genion`), but some indicate real problems with the topology or parameters.
 
 ### 5c. Energy minimization
 
@@ -321,87 +277,153 @@ energy-minimization version:
 ```bash
 sed -i "s:water.md.itp:water.em.itp:g" topol.top
 ```
+Build the `em.tpr`:
 
 ```bash
-gmx grompp \
-    -f ../../mdp_files/em.mdp \
-    -c solv_neutral.gro -r solv_neutral.gro \
-    -p topol.top \
-    -o em.tpr \
-    -maxwarn 1
-
-gmx mdrun \
-    -v \
-    -s em.tpr \
-    -deffnm em \
-    -tableb ../../forcefield/Tables/table*
+gmx_mpi grompp -f ../../mdp_files/em.mdp -c solv_neutral.gro -r solv_neutral.gro -p topol.top -o em.tpr -maxwarn 1
 ```
 
-The `-tableb` flag is essential, ProMPT uses tabulated potentials for bonded interactions, and the tables in `forcefield/Tables/`
-must be passed to every `mdrun` call.
+Then run energy minimization:
+
+```bash
+gmx_mpi mdrun -v -s em.tpr -deffnm em -tableb ../../forcefield/Tables/table*
+```
+
+The `-tableb` flag is essential, ProMPT uses tabulated potentials for bonded interactions, and the tables in `forcefield/Tables/` must be passed to every `mdrun` call.
+
 
 ### 5d. NPT equilibration
-
-Switch the water topology back to the MD version and generate an index file for simulation with heparin (create an index group HP):
+Switch the water topology back to the MD version:
 
 ```bash
 sed -i "s:water.em.itp:water.md.itp:g" topol.top
-gmx make_ndx -f em.gro -o index.ndx
+```
+
+Generate an index file with a combined heparin group `HP` (only needed for `with_hp/`; skip this step for `no_hp/`):
+
+```bash
+gmx_mpi make_ndx -f em.gro -o index.ndx
 # r GDS | r IDO
-# name GDS_IDP HP 
+# name GDS_IDO HP
 # q
 ```
 
-Then run equilibration (with restraints on peptide and heparin backbones):
+Build the `eq.tpr` (with restraints on peptide and heparin backbones), make sure to load gromacs/2019.4 version for this
 
 ```bash
-gmx grompp \
-    -f ../../mdp_files/eq.mdp \
-    -c em.gro \
-    -n index.ndx \
-    -p topol.top \
-    -o eq.tpr \
-    -maxwarn 1
-
-gmx mdrun \
-    -v \
-    -s eq.tpr \
-    -deffnm eq \
-    -tableb ../../forcefield/Tables/table*
+module purge  #removes all the loaded modules
+module load gromacs/2019.4
+gmx_mpi --version 
 ```
 
-The resulting `eq.gro` files for each system are already provided in
-`SS14/`, `CSS14/`, and `PACAP27/` (under both `no_hp/` and `with_hp/`) so you
-can compare your output against the reference.
+```bash
+gmx_mpi grompp -f ../../mdp_files/eq.mdp -c em.gro -r em.gro -n index.ndx -p topol.top -o eq.tpr -maxwarn 1
+```
 
+Equilibration MD is long enough that it must be submitted as a batch job rather than run interactively. Submit using the provided SLURM script:
+
+```bash
+sbatch ../../scripts/eq_submit.sh
+```
+
+**Before submitting**, open `scripts/eq_submit.sh` and edit the job name, wall time, email, allocation account, and the `cd` path to match your setup. Details on the fields are in the comments inside the script.
+
+Check job status with:
+
+```bash
+squeue -u $USER
+```
+
+When the job finishes, you'll have `eq.gro` and `eq.cpt` in the working directory. Reference `eq.gro` files for each system are also provided in `SS14/`, `CSS14/`, and `PACAP27/` (under both `no_hp/` and `with_hp/`) so you can compare your output against the expected result.
+
+## Step 6: Production MD
+
+A 500 ns production MD parameter file (`mdp_files/md.mdp`) and pre-built `run.tpr` files for each system are included, so students can submit the production run directly. From inside the peptide sub-directory (e.g. `SS14/with_hp/`):
+
+```bash
+sbatch ../../scripts/submit.sh
+```
+
+**Before submitting**, edit `scripts/submit.sh` the same way as `eq_submit.sh` (job name, wall time, email, account, working directory).
+
+If you want to modify production parameters (simulation length, output frequency, etc.), regenerate `run.tpr` from the equilibrated structure first:
+
+```bash
+gmx_mpi grompp -f ../../mdp_files/md.mdp -c eq.gro -p topol.top -n index.ndx -o run.tpr -maxwarn 1
+```
 ## Visualizing your trajectory in VMD
 
-After equilibration, you can visualize the trajectory in VMD. Because `.xtc`
-files do not store bond connectivity, you need to first extract a PDB file
-from the `.tpr` topology using `scripts/tpr2pdb.py`:
+After the simulation finishes, you can visualize the trajectory in VMD. Because `.xtc` files do not store bond connectivity, you need to first extract a PDB file from the `.tpr` topology using `scripts/tpr2pdb.py`:
 
 ```bash
-python ../../scripts/tpr2pdb.py -s eq.tpr -x eq.xtc/eq.gro -o eq.pdb
+module purge 
+module load python 
+python ../../scripts/tpr2pdb.py -s run.tpr -x run.xtc -o run.pdb
 ```
 
-Then open VMD with the PDB as the topology reference and the XTC as the
-trajectory:
+Then open VMD with the PDB as the topology reference and the XTC as the trajectory:
 
 ```bash
-vmd -f eq.pdb eq.xtc
+vmd -f run.pdb run.xtc
 ```
 
-## Running on Zaratan
+VMD is typically not installed on Zaratan, so copy `run.pdb` and `run.xtc` back to your laptop first with `scp`.
 
-To run production MD on the University of Maryland's HPC cluster (zaratan) a sample SLURM submission script is provided in the `scripts/` folder. For more details, please refer to https://hpcc.umd.edu/kb/submitting-jobs/.
+## Optional: Building itp files yourself
+
+If you want to generate the force field `.itp` files from scratch (for a new peptide sequence), follow the two sub-steps below. **This section is easier to run on your laptop than on Zaratan** because Step A requires a Jupyter notebook. Once generated, copy the resulting `.itp` files back to Zaratan into the appropriate `forcefield/` sub-directories.
+
+### A. Build the system-level `ff.itp`
+
+Open `scripts/build_ff_itp.ipynb` in Jupyter and change two variables:
+
+```python
+n_peptides = 8                       # number of peptides in the system
+pep_seq    = "AGCKNFFWKTFTSC"        # sequence of the peptide (one-letter code)
+```
+
+Run all cells. The notebook generates the system-level force field file
+containing cation-π interaction parameters. Move the resulting `.itp` into
+`forcefield/` with a descriptive name:
 
 ```bash
-sbatch scripts/submit.sh
+mv ff.itp forcefield/ff_1hp_8SS14.itp
 ```
 
-Before submitting, open `scripts/submit.sh` and edit the job name,
-wall time, email, allocation account, and working directory to match
-your setup.
+### B. Build the per-peptide `.itp` files
+
+First, create a one-line text file containing your peptide sequence, for example `seq.txt`:
+
+```
+AGCKNFFWKTFTSC
+```
+
+Then run `scripts/genitp_batch_of_peptides.py`. The available arguments are:
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `-o`, `--output_dir` | Output directory | required |
+| `-f`, `--input_seq` | Path to text file containing the peptide sequence | required |
+| `-count`, `--peptide_count` | Number of peptides in the system | required |
+| `-bbdih`, `--backbone_dih_type` | Type of backbone dihedral (6 = double-well potential) | `6` |
+| `-bbdih_fc`, `--backbone_dih_force_constant` | Force constant for backbone dihedrals (kJ/mol) | `2` |
+| `-cys`, `--make_cys_bridge` | Turn on a disulfide bridge between the two cysteines in the peptide | `0` |
+
+```bash
+python ./scripts/genitp_batch_of_peptides.py \
+    -o forcefield/PEP_SS14/ \
+    -f seq.txt \
+    -count 8 \
+    -bbdih 6 \
+    -bbdih_fc 0 \
+    -cys 0
+```
+
+For PACAP27, use `-cys 0` and point `-o` to `forcefield/PEP_PACAP27/`.
+
+**Important:** for **CSS14** (cyclic somatostatin-14), set `-cys 1` to enable the Cys3–Cys14 disulfide bridge that makes the peptide cyclic, and point `-o` to `forcefield/PEP_CSS14/`.
+
+This produces 8 files, `pep1.itp` through `pep8.itp`, one per peptide in the system.
 
 ## Script attribution
 
