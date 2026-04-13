@@ -1,7 +1,7 @@
 define			= -DPOSRE
 integrator              = md
 dt                      = 0.01
-nsteps                  = 2000000 ; 20 ps
+nsteps                  = 2000000 ; 20 ns
 ;nstxout                 = 20000
 ;nstvout                 = 20000
 ;nstfout                 = 50000
@@ -33,9 +33,9 @@ rvdw                    = 1.2
 nhchainlength       = 1
 tcoupl                  = Nose-Hoover
 nsttcouple		= 1
-tc_grps                 = System ;Heparin Solvent
-tau_t                   = 1.0 ;1.0
-ref_t                   = 300 ;300
+tc_grps                 = Protein PW Ion  HP
+tau_t                    = 1    1       1       1
+ref_t                   = 350   350     350     350
 ;
 pcoupl                  = Parrinello-Rahman
 pcoupltype              = isotropic

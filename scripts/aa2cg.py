@@ -40,11 +40,11 @@ def run_martinize(pdb_in, cg_pdb_out, ff, box):
 
     half = box / 2.0
     os.system(
-                f"gmx editconf -f {cg_pdb_out} -o CG.gro "
+                f"gmx_mpi editconf -f {cg_pdb_out} -o CG.gro "
                 f"-center {half} {half} {half} -box {box} {box} {box}"
             )
 
-    os.system("gmx genconf -f CG.gro -o CG.gro")
+    os.system("gmx_mpi genconf -f CG.gro -o CG.gro")
 
 
 # ------------------------------------------------------------------ #
