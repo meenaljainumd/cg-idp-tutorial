@@ -2,10 +2,7 @@
 Heparin dp18 radius of gyration (Rg) timeseries.
 Computes Rg of the heparin chain over the trajectory.
 
-Usage:
-    python heparin_rg.py <TPR> <XTC> <CSV_FOLDER> <IMAGE_FOLDER>
-Example:
-    python heparin_rg.py run.tpr run.xtc results/ figures/
+Usage: python heparin_rg.py <TPR> <XTC>
 """
 
 import sys
@@ -17,17 +14,8 @@ import matplotlib.pyplot as plt
 import MDAnalysis as mda
 
 # ── Input ──────────────────────────────────────────────────────
-if len(sys.argv) != 5:
-    print("Usage: python heparin_rg.py <TPR> <XTC> <CSV_FOLDER> <IMAGE_FOLDER>")
-    sys.exit(1)
-
 tpr     = sys.argv[1]
 xtc     = sys.argv[2]
-csv_dir = sys.argv[3]
-img_dir = sys.argv[4]
-
-os.makedirs(csv_dir, exist_ok=True)
-os.makedirs(img_dir, exist_ok=True)
 
 # ── Load trajectory ────────────────────────────────────────────
 u = mda.Universe(tpr, xtc)
@@ -49,15 +37,6 @@ for ts in u.trajectory:
 time_ns = np.array(time_ns)
 rg      = np.array(rg)
 
-# ── Save CSV ───────────────────────────────────────────────────
-outcsv = os.path.join(csv_dir, "heparin_rg.csv")
-np.savetxt(outcsv,
-           np.column_stack([time_ns, rg]),
-           header="time_ns,Rg_A",
-           delimiter=",",
-           comments="")
-print(f"Saved: {outcsv}")
-
 # ── Plot ───────────────────────────────────────────────────────
 fig, ax = plt.subplots(figsize=(7, 4))
 ax.plot(time_ns, rg / 10.0, linewidth=0.5, color="tab:green")
@@ -68,7 +47,7 @@ ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 plt.tight_layout()
 
-outpng = os.path.join(img_dir, "heparin_rg.png")
+outpng = os.path.join("./heparin_rg.png")
 plt.savefig(outpng, dpi=300, bbox_inches="tight")
 print(f"Saved: {outpng}")
 

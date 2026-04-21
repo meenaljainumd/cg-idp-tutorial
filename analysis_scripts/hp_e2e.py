@@ -5,10 +5,7 @@ Computes the distance between the first and last backbone beads
 of the heparin chain over the trajectory.
 
 Usage:
-    python heparin_end_to_end.py <TPR> <XTC> <CSV_FOLDER> <IMAGE_FOLDER>
-
-Example:
-    python heparin_end_to_end.py run.tpr run.xtc results/ figures/
+    python heparin_end_to_end.py <TPR> <XTC> 
 """
 
 import sys
@@ -20,17 +17,8 @@ import matplotlib.pyplot as plt
 import MDAnalysis as mda
 
 # ── Input ──────────────────────────────────────────────────────
-if len(sys.argv) != 5:
-    print("Usage: python heparin_end_to_end.py <TPR> <XTC> <CSV_FOLDER> <IMAGE_FOLDER>")
-    sys.exit(1)
-
 tpr     = sys.argv[1]
 xtc     = sys.argv[2]
-csv_dir = sys.argv[3]
-img_dir = sys.argv[4]
-
-os.makedirs(csv_dir, exist_ok=True)
-os.makedirs(img_dir, exist_ok=True)
 
 # ── Load trajectory ────────────────────────────────────────────
 u = mda.Universe(tpr, xtc)
@@ -62,15 +50,6 @@ for ts in u.trajectory:
 time_ns = np.array(time_ns)
 ree     = np.array(ree)
 
-# ── Save CSV ───────────────────────────────────────────────────
-outcsv = os.path.join(csv_dir, "heparin_ree.csv")
-np.savetxt(outcsv,
-           np.column_stack([time_ns, ree]),
-           header="time_ns,Ree_A",
-           delimiter=",",
-           comments="")
-print(f"Saved: {outcsv}")
-
 # ── Plot ───────────────────────────────────────────────────────
 fig, ax = plt.subplots(figsize=(7, 4))
 ax.plot(time_ns, ree / 10.0, linewidth=0.5, color="tab:blue")
@@ -81,7 +60,7 @@ ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 plt.tight_layout()
 
-outpng = os.path.join(img_dir, "heparin_e2e.png")
+outpng = os.path.join( "./heparin_e2e.png")
 plt.savefig(outpng, dpi=300, bbox_inches="tight")
 print(f"Saved: {outpng}")
 

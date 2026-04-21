@@ -5,12 +5,7 @@ Computes the fraction of peptide pairs forming contiguous beta-sheet
 contacts (≥4 consecutive BB-BB contacts)
 over the trajectory.
 
-Usage:
-    python beta_sheet_fraction.py <TPR> <XTC> <CSV_FOLDER> <IMAGE_FOLDER>
-
-Example:
-    python beta_sheet_fraction.py run.tpr run.xtc results/ figures/
-
+Usage: python beta_sheet_fraction.py <TPR> <XTC>
 Requires general_metrics_functions.py in the same directory.
 """
 
@@ -27,17 +22,8 @@ import networkx as nx
 from general_metrics_functions import contiguous_beta_sheet
 
 # ── Input ──────────────────────────────────────────────────────
-if len(sys.argv) != 5:
-    print("Usage: python beta_sheet_fraction.py <TPR> <XTC> <CSV_FOLDER> <IMAGE_FOLDER>")
-    sys.exit(1)
-
 tpr     = sys.argv[1]
 xtc     = sys.argv[2]
-csv_dir = sys.argv[3]
-img_dir = sys.argv[4]
-
-os.makedirs(csv_dir, exist_ok=True)
-os.makedirs(img_dir, exist_ok=True)
 
 # ── Parameters ─────────────────────────────────────────────────
 BB_BB_CUTOFF = 7.0        # Angstrom cutoff for BB-BB contacts
@@ -111,15 +97,6 @@ beta_fraction = np.array(beta_fraction)
 n_beta_pairs  = np.array(n_beta_pairs)
 largest_sheet = np.array(largest_sheet)
 
-# ── Save CSV ───────────────────────────────────────────────────
-outcsv = os.path.join(csv_dir, "beta_sheet_fraction.csv")
-np.savetxt(outcsv,
-           np.column_stack([time_ns, beta_fraction, n_beta_pairs, largest_sheet]),
-           header="time_ns,beta_fraction,n_beta_pairs,largest_sheet_size",
-           delimiter=",",
-           comments="")
-print(f"Saved: {outcsv}")
-
 # ── Plot ───────────────────────────────────────────────────────
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(7, 7), sharex=True)
 
@@ -141,7 +118,7 @@ ax2.spines["right"].set_visible(False)
 
 plt.tight_layout()
 
-outpng = os.path.join(img_dir, "beta_sheet_fraction.png")
+outpng = os.path.join("./beta_sheet_fraction.png")
 plt.savefig(outpng, dpi=300, bbox_inches="tight")
 print(f"Saved: {outpng}")
 

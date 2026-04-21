@@ -3,9 +3,8 @@ Weighted aggregation number (Nw) timeseries.
 Computes the weighted aggregation number of peptides over the trajectory
 using BB-BB contact-based graph clustering.
 Usage:
-    python aggregation_number.py <TPR> <XTC> <CSV_FOLDER> <IMAGE_FOLDER>
-Example:
-    python aggregation_number.py run.tpr run.xtc results/ figures/
+    python aggregation_number.py <TPR> <XTC>
+    python aggregation_number.py run.tpr run.xtc 
 Requires general_metrics_functions.py in the same directory.
 """
 
@@ -20,17 +19,8 @@ from tqdm import tqdm
 from general_metrics_functions import agg_num
 
 # ── Input ──────────────────────────────────────────────────────
-if len(sys.argv) != 5:
-    print("Usage: python aggregation_number.py <TPR> <XTC> <CSV_FOLDER> <IMAGE_FOLDER>")
-    sys.exit(1)
-
 tpr     = sys.argv[1]
 xtc     = sys.argv[2]
-csv_dir = sys.argv[3]
-img_dir = sys.argv[4]
-
-os.makedirs(csv_dir, exist_ok=True)
-os.makedirs(img_dir, exist_ok=True)
 
 # ── Load trajectory ────────────────────────────────────────────
 u = mda.Universe(tpr, xtc)
@@ -55,15 +45,6 @@ for ts in tqdm(u.trajectory, desc="Computing Nw"):
 time_ns = np.array(time_ns)
 nw_arr  = np.array(nw_list)
 
-# ── Save CSV ───────────────────────────────────────────────────
-outcsv = os.path.join(csv_dir, "aggregation_number.csv")
-np.savetxt(outcsv,
-           np.column_stack([time_ns, nw_arr]),
-           header="time_ns,Nw",
-           delimiter=",",
-           comments="")
-print(f"Saved: {outcsv}")
-
 # ── Plot ───────────────────────────────────────────────────────
 fig, ax = plt.subplots(figsize=(7, 4))
 ax.plot(time_ns, nw_arr, linewidth=0.5, color="tab:purple")
@@ -75,7 +56,7 @@ ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 plt.tight_layout()
 
-outpng = os.path.join(img_dir, "aggregation_number.png")
+outpng = os.path.join( "aggregation_number.png")
 plt.savefig(outpng, dpi=300, bbox_inches="tight")
 print(f"Saved: {outpng}")
 

@@ -7,11 +7,7 @@ A helical contact at residue i exists if BBm(i)–BBp(i+4) or BBp(i)–BBm(i+4)
 distance < cutoff.
 
 Usage:
-    python helical_fraction.py <TPR> <XTC> <CSV_FOLDER> <IMAGE_FOLDER>
-
-Example:
-    python helical_fraction.py run.tpr run.xtc results/ figures/
-
+    python helical_fraction.py <TPR> <XTC> 
 Requires general_metrics_functions.py in the same directory.
 """
 
@@ -26,17 +22,8 @@ from tqdm import tqdm
 from general_metrics_functions import is_helical_dipole_contacts
 
 # ── Input ──────────────────────────────────────────────────────
-if len(sys.argv) != 5:
-    print("Usage: python helical_fraction.py <TPR> <XTC> <CSV_FOLDER> <IMAGE_FOLDER>")
-    sys.exit(1)
-
 tpr     = sys.argv[1]
 xtc     = sys.argv[2]
-csv_dir = sys.argv[3]
-img_dir = sys.argv[4]
-
-os.makedirs(csv_dir, exist_ok=True)
-os.makedirs(img_dir, exist_ok=True)
 
 # ── Parameters ─────────────────────────────────────────────────
 HELICAL_CUTOFF = 3.0  # Angstrom cutoff for BBp-BBm dipole contact
@@ -85,26 +72,6 @@ time_ns = np.array(time_ns)
 mean_helical_fraction = np.array(mean_helical_fraction)
 per_peptide_helical = np.array(per_peptide_helical)  # shape (n_frames, pep_num)
 
-# ── Save CSV ───────────────────────────────────────────────────
-# Save mean helical fraction timeseries
-outcsv = os.path.join(csv_dir, "helical_fraction.csv")
-np.savetxt(outcsv,
-           np.column_stack([time_ns, mean_helical_fraction]),
-           header="time_ns,mean_helical_fraction",
-           delimiter=",",
-           comments="")
-print(f"Saved: {outcsv}")
-
-# Save per-peptide helical fraction
-outcsv2 = os.path.join(csv_dir, "helical_fraction_per_peptide.csv")
-header_cols = "time_ns," + ",".join([f"pep_{i}" for i in range(pep_num)])
-np.savetxt(outcsv2,
-           np.column_stack([time_ns, per_peptide_helical]),
-           header=header_cols,
-           delimiter=",",
-           comments="")
-print(f"Saved: {outcsv2}")
-
 # ── Plot ───────────────────────────────────────────────────────
 fig, ax = plt.subplots()
 
@@ -118,7 +85,7 @@ ax.spines["right"].set_visible(False)
 
 plt.tight_layout()
 
-outpng = os.path.join(img_dir, "helical_fraction.png")
+outpng = os.path.join("helical_fraction.png")
 plt.savefig(outpng, dpi=300, bbox_inches="tight")
 print(f"Saved: {outpng}")
 
