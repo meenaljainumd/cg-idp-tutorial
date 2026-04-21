@@ -360,11 +360,24 @@ module purge
 module load python 
 python ../../scripts/tpr2pdb.py -s run.tpr -x run.xtc -o run.pdb
 ```
+Create an index.ndx file without water partciles:
+
+```bash
+module load gromacs
+gmx_mpi make_ndx -f run.gro -o index.ndx
+# ! PW (or group number of PW)
+#q
+```
+Postprocess the trajectory using the above index file to exclude water particles:
+
+```bash
+gmx_mpi trjconv -s run.tpr -f run.xtc -o traj_nowater.xtc -n index.ndx -pbc mol -center 
+```
 
 Then open VMD with the PDB as the topology reference and the XTC as the trajectory:
 
 ```bash
-vmd -f run.pdb run.xtc
+vmd -f run.pdb traj_nowater.xtc 
 ```
 
 VMD is typically not installed on Zaratan, so copy `run.pdb` and `run.xtc` back to your laptop first with `scp`.

@@ -23,15 +23,15 @@ def main():
         description="Extract a PDB file from a GROMACS .tpr + .xtc pair."
     )
     parser.add_argument("-s", "--tpr", default="eq.tpr",
-                        help="Input .tpr file (default: eq.tpr)")
+                        help="Input .tpr file ")
     parser.add_argument("-x", "--xtc", default="eq.xtc",
-                        help="Input .xtc file (default: eq.xtc)")
+                        help="Input .xtc file")
     parser.add_argument("-o", "--out", default="eq.pdb",
-                        help="Output .pdb file (default: eq.pdb)")
+                        help="Output .pdb file")
     args = parser.parse_args()
 
     u = MDAnalysis.Universe(args.tpr, args.xtc)
-    u.select_atoms("all").write(args.out)
+    u.select_atoms("not resname PW").write(args.out)
     print(f"Wrote {args.out}")
 
 
