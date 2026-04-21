@@ -365,7 +365,7 @@ Create an index.ndx file without water partciles:
 ```bash
 module load gromacs
 gmx_mpi make_ndx -f run.gro -o index.ndx
-# ! PW (or group number of PW)
+# !PW (or group number of PW)
 #q
 ```
 Postprocess the trajectory using the above index file to exclude water particles:
