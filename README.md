@@ -369,6 +369,56 @@ vmd -f run.pdb run.xtc
 
 VMD is typically not installed on Zaratan, so copy `run.pdb` and `run.xtc` back to your laptop first with `scp`.
 
+## Analysis
+
+After the production run finishes, you can analyze the trajectory using
+the scripts in `analysis_scripts/`. Each script takes TPR and XTC files and saves a PNG plot in the current directory. 
+
+```bash
+module purge
+module load python
+```
+
+### Running the analysis scripts
+
+Navigate to the simulation directory you want to analyze:
+```bash
+cd SS14/with_hp
+```
+Run each analysis script (one by one). Here we show how to analyze heparin's
+end-to-end distance over time:
+
+```bash
+python ../../analysis_scripts/hp_e2e.py run.tpr run.xtc
+```
+The PNG files will appear in the current directory (e.g. `SS14/with_hp/`).
+
+> **Note:** The heparin scripts (`hp_e2e.py`, `hp_rg.py`) only work for
+> `with_hp/` systems.
+
+### Available scripts
+
+| Script | Property |
+|---|---|
+| `hp_rg.py` | Heparin radius of gyration vs time |
+| `hp_e2e.py` | Heparin end-to-end distance vs time |
+| `aggregation_number.py` | Weighted aggregation number (Nw) vs time |
+| `beta_sheet_fraction.py` | Beta-sheet fraction and largest sheet size vs time |
+| `helical_fraction.py` | Helical contact fraction vs time |
+
+### Viewing plots on Zaratan
+
+1. Connect to UMD VPN (GlobalProtect) or eduroam
+2. Go to https://portal.zaratan.umd.edu/
+3. Sign in with your Zaratan username and password
+4. Click **Files → Home Directory**
+5. Navigate to `cg-idp-tutorial` → your system folder (e.g. `SS14/with_hp/`)
+6. Click on the PNG file to preview it
+
+This is how the browser window looks:
+
+![portal_zaratan](/images/portal_zaratan_umd.png)
+
 ## Optional: Building itp files yourself
 
 If you want to generate the force field `.itp` files from scratch (for a new peptide sequence), follow the two sub-steps below. **This section is easier to run on your laptop than on Zaratan** because Step A requires a Jupyter notebook. Once generated, copy the resulting `.itp` files back to Zaratan into the appropriate `forcefield/` sub-directories.
